@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://duxtr160wi40i"]
+
+[ext_resource type="Script" path="res://player_3d.gd" id="1_853gj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5xj4v"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hjopr"]
+
+[node name="Player3d" type="CharacterBody3D"]
+script = ExtResource("1_853gj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.169025, 0)
+mesh = SubResource("CapsuleMesh_5xj4v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.174826, 0)
+shape = SubResource("CapsuleShape3D_hjopr")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+spring_length = 6.0
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0131095, 0.877226, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 0.999906, -0.0137179, 0, 0.0137179, 0.999906, 0, 0.118311, 0.114928)
+current = true

@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://clikmqbx2stdm"]
+[gd_scene load_steps=8 format=3 uid="uid://clikmqbx2stdm"]
 
-[ext_resource type="Script" path="res://player_3d.gd" id="1_dgpcx"]
+[ext_resource type="PackedScene" uid="uid://duxtr160wi40i" path="res://player_3d.tscn" id="1_xband"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cpl82"]
 sky_top_color = Color(0.240646, 0.478547, 0.607469, 1)
@@ -21,13 +21,6 @@ size = Vector2(500, 500)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ychxy"]
 albedo_color = Color(0.245097, 0.362486, 0.135697, 1)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_5xj4v"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hjopr"]
-
-[sub_resource type="PrismMesh" id="PrismMesh_j88xk"]
-size = Vector3(30, 10, 20)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w8rro"]
 albedo_color = Color(0.508508, 0.107079, 0.144026, 1)
 
@@ -45,33 +38,8 @@ use_collision = true
 mesh = SubResource("PlaneMesh_citgd")
 material = SubResource("StandardMaterial3D_ychxy")
 
-[node name="Player3d" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.5578, 0)
-script = ExtResource("1_dgpcx")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.3524, 0)
-mesh = SubResource("CapsuleMesh_5xj4v")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.3466, 0)
-shape = SubResource("CapsuleShape3D_hjopr")
-
-[node name="Head" type="Node3D" parent="Player3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0131095, -18.6442, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Player3d/Head"]
-transform = Transform3D(1, 0, 0, 0, 0.999906, -0.0137179, 0, 0.0137179, 0.999906, 0, 0.118311, 0.114928)
-current = true
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.941129, 0.338048, 0, -0.338048, 0.941129, 0, 10.4259, 13.7776)
-fov = 110.346
-
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22856, 25.8899)
-use_collision = true
-mesh = SubResource("PrismMesh_j88xk")
+[node name="Player3d" parent="." instance=ExtResource("1_xband")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.799039, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71429, 0.246231, -7.92032)
@@ -86,13 +54,11 @@ size = Vector3(4.42859, 0.351074, 4.19141)
 material = SubResource("StandardMaterial3D_w8rro")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211495, 1.9714, -10.8646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19211, 35.2801, -16.5716)
 use_collision = true
 size = Vector3(4.42859, 0.351074, 4.19141)
 material = SubResource("StandardMaterial3D_w8rro")
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44221, 2.66792, -14.9402)
-use_collision = true
-size = Vector3(4.42859, 0.001, 4.19141)
-material = SubResource("StandardMaterial3D_w8rro")
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28.8405, 65.6962)
+size = Vector3(2.5, 60.1811, 2.5)
