@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.5
+const SPRINT_SPEED = 1000
 var SPEED = WALK_SPEED
 const JUMP_VELOCITY = 6.0
 
@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		toggle_camera_parent()
 	# Add the gravity.
 	
-	if Input.is_action_just_pressed("sprint"):
+	if Input.is_action_pressed("sprint"):
 		SPEED = SPRINT_SPEED
 		FOV_CHANGE = 9.0
 	else:
