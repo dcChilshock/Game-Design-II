@@ -8,8 +8,11 @@ const JUMP_VELOCITY = 6.0
 const CAM_SENSITIVITY = 0.03
 @onready var camera = $Head/Camera3D
 @onready var camera_arm = $SpringArm3D
+@onready var camera_tele = $Head/CSGSphere3D #or use CSGSphere3D
 @onready var camera_pos = camera.position
 @onready var BASE_FOV = camera.fov
+#@onready var global_pos = player.position
+@onready var player = $Player3d
 var first_person = true
 
 var FOV_CHANGE = 1.0
@@ -17,6 +20,7 @@ var FOV_CHANGE = 1.0
 const BOB_FREQ = 2.4 #how frequent the bobings are
 const BOB_AMP = 0.08 #how large the bobings are
 var t_bob = 0.0 
+
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -59,7 +63,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
-	#@if Input.is_action_just_pressed("teleport")
+	#if Input.is_action_just_pressed("teleport"):
+		
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -90,11 +95,13 @@ func toggle_camera_parent():
 		parent = "SpringArm3D"
 		#TODO: Model visibel
 	var child = camera
+	var sphere = camera_tele
 	child.get_parent().remove_child(child)
 	get_node(parent).add_child(child)
 	camera = child 
 	if not first_person:
 		camera.position = camera_pos
+		sphere.position = camera_pos
 		#TODO: Model invisible
 	first_person = not first_person
 	
