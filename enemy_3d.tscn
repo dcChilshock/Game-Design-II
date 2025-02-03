@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://qvwg5skeqnls"]
+
+[ext_resource type="Script" path="res://enemy_3d.gd" id="1_5l8gt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7ksx"]
+albedo_color = Color(0.968391, 0.194594, 0.237604, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qv47w"]
+material = SubResource("StandardMaterial3D_n7ksx")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f8ei7"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2wp3x"]
+radius = 8.88823
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m2d40"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tbdxk"]
+radius = 0.75
+
+[node name="enemy3d" type="CharacterBody3D" groups=["Enemy"]]
+script = ExtResource("1_5l8gt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_qv47w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_f8ei7")
+
+[node name="AttackRange" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackRange"]
+shape = SubResource("CylinderShape3D_2wp3x")
+
+[node name="DamageArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DamageArea"]
+shape = SubResource("CapsuleShape3D_m2d40")
+
+[node name="AttackArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea"]
+shape = SubResource("CapsuleShape3D_tbdxk")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

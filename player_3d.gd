@@ -21,6 +21,8 @@ const BOB_FREQ = 2.4 #how frequent the bobings are
 const BOB_AMP = 0.08 #how large the bobings are
 var t_bob = 0.0 
 
+var inertia = Vector3.ZERO
+#TODO: health stuff
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -63,7 +65,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
-	#if Input.is_action_just_pressed("teleport"):
+	if Input.is_action_just_pressed("teleport"):
+		$player_3d.global_position = $Head/CSGSphere3D.global_position
 		
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -86,8 +89,15 @@ func _physics_process(delta: float) -> void:
 	#the number value 0.
 	camera.transform.origin = headbob(t_bob)
 	
+	velocity += inertia
+	inertia = inertia.move_toward(Vector3.ZERO,delta*1000)
+	
+	
+	
 	move_and_slide()
-
+func take_damage(dmg):
+	#TODO
+	OS.alert("You died!")
 
 func toggle_camera_parent():
 	var parent = "Head"

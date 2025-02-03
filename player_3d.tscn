@@ -8,7 +8,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqpyf"]
 
-[node name="Player3d" type="CharacterBody3D"]
+[node name="Player3d" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_853gj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
