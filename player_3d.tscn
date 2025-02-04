@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://duxtr160wi40i"]
+[gd_scene load_steps=6 format=3 uid="uid://duxtr160wi40i"]
 
 [ext_resource type="Script" path="res://player_3d.gd" id="1_853gj"]
 
@@ -7,6 +7,9 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hjopr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqpyf"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ykay2"]
+radius = 0.581987
 
 [node name="Player3d" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_853gj")
@@ -33,9 +36,15 @@ target_position = Vector3(0, 0, -10)
 transform = Transform3D(1, 0, 0, 0, 0.999906, -0.0137179, 0, 0.0137179, 0.999906, 0, 0, 0)
 current = true
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Head"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, -10)
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.0131095, 0.877226, -9.8498)
 material_override = SubResource("StandardMaterial3D_jqpyf")
 flip_faces = true
 radial_segments = 4
 rings = 2
+
+[node name="Feet" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Feet"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.337129, 0)
+shape = SubResource("CapsuleShape3D_ykay2")

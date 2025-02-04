@@ -9,6 +9,9 @@ var ACCEL = 20
 var ATTACK = 10
 var KNOCKBACK = 16.0
 
+func take_damage(_dmg):
+	self.queue_free()
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta

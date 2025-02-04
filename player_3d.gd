@@ -8,11 +8,11 @@ const JUMP_VELOCITY = 6.0
 const CAM_SENSITIVITY = 0.03
 @onready var camera = $Head/Camera3D
 @onready var camera_arm = $SpringArm3D
-@onready var camera_tele = $Head/CSGSphere3D #or use CSGSphere3D
+#@onready var camera_tele = $Head/CSGSphere3D #or use CSGSphere3D
 @onready var camera_pos = camera.position
 @onready var BASE_FOV = camera.fov
 #@onready var global_pos = player.position
-@onready var player = $Player3d
+#@onready var player = $Player3d
 var first_person = true
 
 var FOV_CHANGE = 1.0
@@ -23,6 +23,11 @@ var t_bob = 0.0
 
 var inertia = Vector3.ZERO
 #TODO: health stuff
+var MAX_HEALTH = 50
+var HEALTH = MAX_HEALTH
+var damage_lock = 0.0
+
+@onready var HUD = get_tree().get_first_node_in_group("HUD")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -66,7 +71,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		
 	if Input.is_action_just_pressed("teleport"):
-		$player_3d.global_position = $Head/CSGSphere3D.global_position
+		$".".position = Vector3(100,100,100) #x,y,z
+		
 		
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -91,13 +97,29 @@ func _physics_process(delta: float) -> void:
 	
 	velocity += inertia
 	inertia = inertia.move_toward(Vector3.ZERO,delta*1000)
+	damage_lock = max(damage_lock-delta,0.0)
 	
+	for enemy in get_tree().get_nodes_in_group("Enemy"):
+		if $Feet.overlaps_area(enemy.dmg_area):
+			enemy.take_damage(0)
 	
-	
+	HUD.healthbar.max_value = MAX_HEALTH
+	HUD.healthbar.value = int(HEALTH)
+			
+			
 	move_and_slide()
+
 func take_damage(dmg):
-	#TODO
-	OS.alert("You died!")
+	if damage_lock == 0.0:
+		damage_lock = 0.5
+		HEALTH -= dmg
+		# TODO: dmg shader 
+		if HEALTH <= 0:
+			await get_tree().create_timer(0.25).timeout
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			OS.alert("You died!")
+			get_tree().reload_current_scene()
+	pass
 
 func toggle_camera_parent():
 	var parent = "Head"
@@ -105,13 +127,13 @@ func toggle_camera_parent():
 		parent = "SpringArm3D"
 		#TODO: Model visibel
 	var child = camera
-	var sphere = camera_tele
+	#var sphere = camera_tele
 	child.get_parent().remove_child(child)
 	get_node(parent).add_child(child)
 	camera = child 
 	if not first_person:
 		camera.position = camera_pos
-		sphere.position = camera_pos
+		#sphere.position = camera_pos
 		#TODO: Model invisible
 	first_person = not first_person
 	
