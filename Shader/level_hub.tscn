@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://kuhn8g3hlaql"]
+
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_7jk3a"]
+[ext_resource type="Resource" path="res://Terrains/data.hterrain" id="2_bpdao"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_vmko1"]
+[ext_resource type="Texture2D" uid="uid://b68bycevi5ofn" path="res://Textures/Grass004/Grass004_1K-JPG_Color.jpg" id="4_k1r4m"]
+[ext_resource type="Texture2D" uid="uid://bqnfd1pcfyabn" path="res://Textures/Grass004/Grass004_1K-JPG_NormalGL.jpg" id="5_5g3sp"]
+
+[sub_resource type="Resource" id="Resource_6gk7x"]
+script = ExtResource("3_vmko1")
+mode = 0
+textures = [[ExtResource("4_k1r4m")], [ExtResource("5_5g3sp")]]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_vfsbr"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2sxn8"]
+size = Vector2(500, 500)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uosfs"]
+
+[node name="level_HUB" type="Node3D"]
+
+[node name="HTerrain" type="Node3D" parent="."]
+script = ExtResource("1_7jk3a")
+centered = true
+_terrain_data = ExtResource("2_bpdao")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_6gk7x")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_vfsbr")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -41.2725, 0)
+mesh = SubResource("PlaneMesh_2sxn8")
+material = SubResource("StandardMaterial3D_uosfs")

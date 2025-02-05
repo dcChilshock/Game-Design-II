@@ -12,7 +12,7 @@ const CAM_SENSITIVITY = 0.03
 @onready var camera_pos = camera.position
 @onready var BASE_FOV = camera.fov
 #@onready var global_pos = player.position
-#@onready var player = $Player3d
+@onready var player = $"."
 var first_person = true
 
 var FOV_CHANGE = 1.0
@@ -28,7 +28,7 @@ var HEALTH = MAX_HEALTH
 var damage_lock = 0.0
 
 @onready var HUD = get_tree().get_first_node_in_group("HUD")
-
+var dmg_shader = preload("res://Shader/take_damage.tres")
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
@@ -71,8 +71,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		
 	if Input.is_action_just_pressed("teleport"):
-		$".".position = Vector3(100,100,100) #x,y,z
-		
+		$".".position = Vector3(100,0,100) #x,y,z
+		var x = $".".x  
 		
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -105,14 +105,18 @@ func _physics_process(delta: float) -> void:
 	
 	HUD.healthbar.max_value = MAX_HEALTH
 	HUD.healthbar.value = int(HEALTH)
-			
-			
+	if damage_lock == 0.0:
+		HUD.dmg_overlay.material = null
+		
 	move_and_slide()
 
 func take_damage(dmg):
 	if damage_lock == 0.0:
 		damage_lock = 0.5
 		HEALTH -= dmg
+		var d_intensity = clamp(1.0-((HEALTH+0.01)/MAX_HEALTH), 0.1,0.8)
+		HUD.dmg_overlay.material = dmg_shader.duplicate()
+		HUD.dmg_overlay.material.set_shader_parameter("intensity",d_intensity)
 		# TODO: dmg shader 
 		if HEALTH <= 0:
 			await get_tree().create_timer(0.25).timeout

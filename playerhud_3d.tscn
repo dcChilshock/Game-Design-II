@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://playerhud_3d.gd" id="1_rqmkd"]
 
-[node name="playerhud_3d" type="Control"]
+[node name="playerhud_3d" type="Control" groups=["HUD"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_rqmkd")
 
-[node name="overlay" type="ColorRect" parent="."]
+[node name="overlay" type="ColorRect" parent="." groups=["HUD"]]
 layout_mode = 0
 offset_right = 209.0
 offset_bottom = 228.0
@@ -20,10 +20,27 @@ scale = Vector2(5.53401, 2.86407)
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="healthbar" type="ProgressBar" parent="."]
+[node name="healthbar" type="ProgressBar" parent="." groups=["HUD"]]
 modulate = Color(0.332552, 0.488691, 0.295215, 1)
 layout_mode = 0
 offset_right = 486.0
 offset_bottom = 55.0
 mouse_filter = 2
 show_percentage = false
+
+[node name="Popup" type="Panel" parent="." groups=["HUD"]]
+visible = false
+layout_mode = 0
+offset_left = 253.0
+offset_top = 198.0
+offset_right = 681.0
+offset_bottom = 336.0
+
+[node name="Label" type="Label" parent="Popup"]
+visible = false
+layout_mode = 0
+offset_left = 21.0
+offset_top = 16.0
+offset_right = 409.0
+offset_bottom = 118.0
+vertical_alignment = 1

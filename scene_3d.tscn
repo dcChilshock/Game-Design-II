@@ -96,4 +96,4 @@ navigation_mesh = SubResource("NavigationMesh_rgreu")
 [node name="enemy3d" parent="." instance=ExtResource("10_2wi1h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1955, 4.01708, -7.09345)
 
-[node name="playerhud_3d" parent="." groups=["HUD"] instance=ExtResource("11_1h4u1")]
+[node name="playerhud_3d" parent="." instance=ExtResource("11_1h4u1")]
