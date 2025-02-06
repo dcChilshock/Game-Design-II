@@ -13,7 +13,7 @@ func _on_body_entered(body: Node3D) -> void:
 			await get_tree().create_timer(0.1).timeout
 			get_tree().change_scene_to_file(lvl)
 		else:
-			OS.alert("No next Level!")
-			#TODO make a hub world or level
+			get_tree().change_scene_to_file("res://Shader/level_hub.tscn")
+			
 	pass
 		

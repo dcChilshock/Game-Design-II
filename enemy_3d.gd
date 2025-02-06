@@ -25,6 +25,7 @@ func _physics_process(delta: float) -> void:
 	velocity = velocity.lerp(dir * SPEED, ACCEL * delta)
 	move_and_slide()
 	
-	
+func _ready():
+	nav_agent.target_position = global_position
 	
 	

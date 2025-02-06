@@ -108,6 +108,8 @@ func _physics_process(delta: float) -> void:
 	if damage_lock == 0.0:
 		HUD.dmg_overlay.material = null
 		
+	if self.global_position.y <= -50:
+		take_damage(HEALTH)
 	move_and_slide()
 
 func take_damage(dmg):
