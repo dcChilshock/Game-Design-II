@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://duxtr160wi40i"]
+[gd_scene load_steps=7 format=3 uid="uid://duxtr160wi40i"]
 
 [ext_resource type="Script" path="res://player_3d.gd" id="1_853gj"]
+[ext_resource type="PackedScene" uid="uid://bhqjlyugtoo4k" path="res://playerhud_3d.tscn" id="2_871gg"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5xj4v"]
 
@@ -48,3 +49,5 @@ rings = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Feet"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.337129, 0)
 shape = SubResource("CapsuleShape3D_ykay2")
+
+[node name="playerhud_3d" parent="." instance=ExtResource("2_871gg")]

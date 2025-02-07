@@ -21,13 +21,15 @@ const BOB_FREQ = 2.4 #how frequent the bobings are
 const BOB_AMP = 0.08 #how large the bobings are
 var t_bob = 0.0 
 
+var PUSH_FORCE = 50.0
+
 var inertia = Vector3.ZERO
 #TODO: health stuff
 var MAX_HEALTH = 50
 var HEALTH = MAX_HEALTH
 var damage_lock = 0.0
 
-@onready var HUD = get_tree().get_first_node_in_group("HUD")
+@onready var HUD = $playerhud_3d
 var dmg_shader = preload("res://Shader/take_damage.tres")
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -72,7 +74,7 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("teleport"):
 		$".".position = Vector3(100,0,100) #x,y,z
-		var x = $".".x  
+		#var x = $".".x  
 		
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -110,6 +112,13 @@ func _physics_process(delta: float) -> void:
 		
 	if self.global_position.y <= -50:
 		take_damage(HEALTH)
+		
+	for i in range(get_slide_collision_count()):
+		var c = get_slide_collision(i)
+		var col = c.get_collider()
+		if col is RigidBody3D and col.is_in_group("interact") and is_on_floor():
+			col.apply_central_force(-c.get_normal()*PUSH_FORCE)
+		
 	move_and_slide()
 
 func take_damage(dmg):

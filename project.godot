@@ -27,6 +27,7 @@ import/blender/enabled=false
 HUD=""
 Enemy=""
 player=""
+interact=""
 
 [input]
 
