@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://duxtr160wi40i"]
+[gd_scene load_steps=8 format=3 uid="uid://duxtr160wi40i"]
 
 [ext_resource type="Script" path="res://player_3d.gd" id="1_853gj"]
 [ext_resource type="PackedScene" uid="uid://bhqjlyugtoo4k" path="res://playerhud_3d.tscn" id="2_871gg"]
+[ext_resource type="PackedScene" uid="uid://bo1a7hoxixeco" path="res://3d models/characters/gobot.glb" id="3_htdsb"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5xj4v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hjopr"]
+height = 1.499
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqpyf"]
 
@@ -17,18 +19,19 @@ script = ExtResource("1_853gj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.169025, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_5xj4v")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.174826, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.773874, 0)
 shape = SubResource("CapsuleShape3D_hjopr")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 spring_length = 6.0
 
 [node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0131095, 0.877226, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0131095, 0.932557, -0.438002)
 
 [node name="RayCast3D" type="RayCast3D" parent="Head"]
 target_position = Vector3(0, 0, -10)
@@ -45,9 +48,13 @@ radial_segments = 4
 rings = 2
 
 [node name="Feet" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.214958, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Feet"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.337129, 0)
 shape = SubResource("CapsuleShape3D_ykay2")
 
 [node name="playerhud_3d" parent="." instance=ExtResource("2_871gg")]
+
+[node name="gobot" parent="." instance=ExtResource("3_htdsb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
