@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bk567wrfqnqbl"]
+[gd_scene load_steps=22 format=3 uid="uid://bk567wrfqnqbl"]
 
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_atqss"]
 [ext_resource type="Texture2D" uid="uid://cw0nnx3p7yt2h" path="res://Textures/Skyboxes/DaySkyHDRI008A_1K-HDR.exr" id="1_o4liq"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dnqwaulbd3hmd" path="res://pushblock.tscn" id="15_88kci"]
 [ext_resource type="PackedScene" uid="uid://dvo50ygohe6yg" path="res://kickball.tscn" id="16_rewsu"]
 [ext_resource type="PackedScene" uid="uid://bvxg1t6xl66bb" path="res://3d models/blackhole/scene.gltf" id="16_voi0b"]
+[ext_resource type="PackedScene" uid="uid://ygd8et58m1er" path="res://movingplatfrom_t.tscn" id="17_qnxqj"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pg6o4"]
 panorama = ExtResource("1_o4liq")
@@ -71,3 +72,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 173.389, 0.552732, 111.28)
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("16_voi0b")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -134.664, 87.4912, 27.626)
+
+[node name="Movingplatfrom_t" parent="." instance=ExtResource("17_qnxqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.1867, 0.48278, 107.788)
