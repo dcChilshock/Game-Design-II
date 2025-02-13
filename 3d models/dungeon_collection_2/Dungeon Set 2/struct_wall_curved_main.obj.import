@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d0vglxxbvt4ay"
+path="res://.godot/imported/struct_wall_curved_main.obj-608120bc9fa10862253591577af306d0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/struct_wall_curved_main.obj-608120bc9fa10862253591577af306d0.mesh"]
+
+source_file="res://3d models/dungeon_collection_2/Dungeon Set 2/struct_wall_curved_main.obj"
+dest_files=["res://.godot/imported/struct_wall_curved_main.obj-608120bc9fa10862253591577af306d0.mesh", "res://.godot/imported/struct_wall_curved_main.obj-608120bc9fa10862253591577af306d0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

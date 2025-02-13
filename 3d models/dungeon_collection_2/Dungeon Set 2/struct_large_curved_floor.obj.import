@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bu18vwx8ges31"
+path="res://.godot/imported/struct_large_curved_floor.obj-b41a1d750f46eee06e1631026de6e0fe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/struct_large_curved_floor.obj-b41a1d750f46eee06e1631026de6e0fe.mesh"]
+
+source_file="res://3d models/dungeon_collection_2/Dungeon Set 2/struct_large_curved_floor.obj"
+dest_files=["res://.godot/imported/struct_large_curved_floor.obj-b41a1d750f46eee06e1631026de6e0fe.mesh", "res://.godot/imported/struct_large_curved_floor.obj-b41a1d750f46eee06e1631026de6e0fe.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

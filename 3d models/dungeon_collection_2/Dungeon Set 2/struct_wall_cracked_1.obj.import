@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://boeyorc0mnmlu"
+path="res://.godot/imported/struct_wall_cracked_1.obj-5adc1d01ce9a11c7c6aad056b3f64dee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/struct_wall_cracked_1.obj-5adc1d01ce9a11c7c6aad056b3f64dee.mesh"]
+
+source_file="res://3d models/dungeon_collection_2/Dungeon Set 2/struct_wall_cracked_1.obj"
+dest_files=["res://.godot/imported/struct_wall_cracked_1.obj-5adc1d01ce9a11c7c6aad056b3f64dee.mesh", "res://.godot/imported/struct_wall_cracked_1.obj-5adc1d01ce9a11c7c6aad056b3f64dee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

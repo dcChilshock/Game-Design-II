@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c4eevxcdqboha"
+path="res://.godot/imported/trap_ceiling_crusher_base.obj-5a9f5ab9b45c2592b4b0b685f418a7ef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/trap_ceiling_crusher_base.obj-5a9f5ab9b45c2592b4b0b685f418a7ef.mesh"]
+
+source_file="res://3d models/dungeon_collection_2/Dungeon Set 2/trap_ceiling_crusher_base.obj"
+dest_files=["res://.godot/imported/trap_ceiling_crusher_base.obj-5a9f5ab9b45c2592b4b0b685f418a7ef.mesh", "res://.godot/imported/trap_ceiling_crusher_base.obj-5a9f5ab9b45c2592b4b0b685f418a7ef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

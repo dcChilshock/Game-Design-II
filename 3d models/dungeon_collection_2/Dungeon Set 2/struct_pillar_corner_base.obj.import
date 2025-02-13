@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://n3872ua524al"
+path="res://.godot/imported/struct_pillar_corner_base.obj-c4aa2a392b2950f37f6a1d806d0b032b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/struct_pillar_corner_base.obj-c4aa2a392b2950f37f6a1d806d0b032b.mesh"]
+
+source_file="res://3d models/dungeon_collection_2/Dungeon Set 2/struct_pillar_corner_base.obj"
+dest_files=["res://.godot/imported/struct_pillar_corner_base.obj-c4aa2a392b2950f37f6a1d806d0b032b.mesh", "res://.godot/imported/struct_pillar_corner_base.obj-c4aa2a392b2950f37f6a1d806d0b032b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

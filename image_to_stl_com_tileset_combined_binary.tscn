@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd4onn43yau34"]
+
+[ext_resource type="PackedScene" uid="uid://by4c6ogus7uk1" path="res://Dungeon 3d model set/ImageToStl.com_tileset_combined_binary.gltf" id="1_s4g3y"]
+
+[node name="Dungeontileset1" instance=ExtResource("1_s4g3y")]

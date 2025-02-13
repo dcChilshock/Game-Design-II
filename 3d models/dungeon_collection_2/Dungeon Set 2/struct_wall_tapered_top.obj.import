@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dbiisjmdeue68"
+path="res://.godot/imported/struct_wall_tapered_top.obj-0dced898b8d0668b5c0350fbade4f34d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/struct_wall_tapered_top.obj-0dced898b8d0668b5c0350fbade4f34d.mesh"]
+
+source_file="res://3d models/dungeon_collection_2/Dungeon Set 2/struct_wall_tapered_top.obj"
+dest_files=["res://.godot/imported/struct_wall_tapered_top.obj-0dced898b8d0668b5c0350fbade4f34d.mesh", "res://.godot/imported/struct_wall_tapered_top.obj-0dced898b8d0668b5c0350fbade4f34d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
