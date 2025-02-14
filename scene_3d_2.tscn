@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dvo50ygohe6yg" path="res://kickball.tscn" id="16_rewsu"]
 [ext_resource type="PackedScene" uid="uid://bvxg1t6xl66bb" path="res://3d models/blackhole/scene.gltf" id="16_voi0b"]
 [ext_resource type="PackedScene" uid="uid://ygd8et58m1er" path="res://movingplatfrom_t.tscn" id="17_qnxqj"]
-[ext_resource type="PackedScene" uid="uid://byfwdkfv71ksj" path="res://Textures/wests_textures/japanese_stone_wall_1k.gltf/japanese_stone_wall_1k.gltf" id="18_mgc8a"]
+[ext_resource type="PackedScene" uid="uid://byfwdkfv71ksj" path="res://Textures/japanese_stone_wall_1k.gltf/japanese_stone_wall_1k.gltf" id="18_mgc8a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pg6o4"]
 panorama = ExtResource("1_o4liq")
