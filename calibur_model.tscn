@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpyql2kiol73x"]
+
+[ext_resource type="PackedScene" uid="uid://baskf6wqi6kph" path="res://VGC models/Calibur/calibur__vgdc.glb" id="1_0hh5s"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_0hh5s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.561576, 0, 0)
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, -0.980469, 0, 0)
+
+[node name="Skeleton3D" parent="Sketchfab_model/470fbca5ee3345d09f1c05d26df614bd_fbx/Object_2/RootNode/Armature/Object_8" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.163903, 1.95388e-08)
+
+[node name="Object_10" parent="Sketchfab_model/470fbca5ee3345d09f1c05d26df614bd_fbx/Object_2/RootNode/Armature/Object_8" index="1"]
+transform = Transform3D(100, 0, 0, 0, 8.14978e-07, 100, 0, -100, 8.14978e-07, 0, 0, 0)
+
+[node name="Object_12" parent="Sketchfab_model/470fbca5ee3345d09f1c05d26df614bd_fbx/Object_2/RootNode/Armature/Object_8" index="2"]
+transform = Transform3D(100, 0, 0, 0, 8.14978e-07, 100, 0, -100, 8.14978e-07, 0, 0, 0)
+
+[node name="Object_14" parent="Sketchfab_model/470fbca5ee3345d09f1c05d26df614bd_fbx/Object_2/RootNode/Armature/Object_8" index="3"]
+transform = Transform3D(0.0907106, -100, 0.0138059, 99.9999, 0.0907278, 0.125082, -0.125095, 0.0136925, 99.9999, 0, 0, 0)

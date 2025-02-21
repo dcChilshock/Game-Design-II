@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://clikmqbx2stdm"]
+[gd_scene load_steps=21 format=3 uid="uid://clikmqbx2stdm"]
 
 [ext_resource type="Texture2D" uid="uid://cw0nnx3p7yt2h" path="res://Textures/Skyboxes/DaySkyHDRI008A_1K-HDR.exr" id="1_6n0xy"]
 [ext_resource type="PackedScene" uid="uid://duxtr160wi40i" path="res://player_3d.tscn" id="1_xband"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dunxodry1x1k6" path="res://3d models/dungeon_essential_kit/wall_corner.tscn" id="12_x2fuv"]
 [ext_resource type="PackedScene" uid="uid://cht31752pkcu7" path="res://3d models/dungeon_essential_kit/statue_1.tscn" id="13_hi1y1"]
 [ext_resource type="PackedScene" uid="uid://qqwuldxqn3j8" path="res://floor.tscn" id="14_sjils"]
+[ext_resource type="PackedScene" uid="uid://c3wlqqbvfcd0b" path="res://calibur_enemy.tscn" id="15_w2yuk"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cdopy"]
 panorama = ExtResource("1_6n0xy")
@@ -167,3 +168,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.98175, -1.78814e-07)
 
 [node name="Floor4" parent="Spacing2" instance=ExtResource("14_sjils")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.34601e-05, -5.88739, 0.000347391)
+
+[node name="Calibur_enemy" parent="." groups=["Enemy"] instance=ExtResource("15_w2yuk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5346, 0.462757, 22.4233)
+
+[editable path="Calibur_enemy"]
