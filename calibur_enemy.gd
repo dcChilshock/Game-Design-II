@@ -5,7 +5,7 @@ extends CharacterBody3D
 @onready var nav_agent = $NavigationAgent3D
 @onready var animator = $Sketchfab_Scene/AnimationPlayer
 #var HEALTH = 1
-var SPEED = 3.0
+var SPEED = 10.0
 var ACCEL = 20
 var ATTACK = 10
 var KNOCKBACK = 16.0
@@ -14,12 +14,11 @@ var RUNSPEED = SPEED * 1.5
 
 
 func take_damage(_dmg):
-	animator.play("Death")
+	#animator.play("Death")
 	self.queue_free()
 
-
 func _physics_process(delta: float) -> void:
-	for player in get_tree().get_nodes_in_group("Player"):
+	for player in get_tree().get_nodes_in_group("player"):
 		if $AttackRange.overlaps_body(player):
 			nav_agent.target_position = player.global_position
 			SPEED = RUNSPEED
@@ -28,8 +27,7 @@ func _physics_process(delta: float) -> void:
 		if atk_area.overlaps_body(player):
 			animator.play("Attack1")
 			player.take_damage(ATTACK)
-			player.inertia = (player.global_position-self.global_position) \
-							  .normalized() * KNOCKBACK
+			player.inertia = (player.global_position-self.global_position).normalized() * KNOCKBACK
 			await animator.animation_finished
 	var dir = (nav_agent.target_position-self.global_position)
 	dir.y = 0
@@ -43,6 +41,7 @@ func _physics_process(delta: float) -> void:
 	
 	if animator.current_animation != "Attack1":
 		if velocity.length() <= 1:
+			animator.stop(true)
 			animator.play("Idle")
 		elif SPEED == WALKSPEED:
 			animator.play("Walk")

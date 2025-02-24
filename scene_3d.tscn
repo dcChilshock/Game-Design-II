@@ -169,7 +169,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.98175, -1.78814e-07)
 [node name="Floor4" parent="Spacing2" instance=ExtResource("14_sjils")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.34601e-05, -5.88739, 0.000347391)
 
-[node name="Calibur_enemy" parent="." groups=["Enemy"] instance=ExtResource("15_w2yuk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5346, 0.462757, 22.4233)
-
-[editable path="Calibur_enemy"]
+[node name="Calibur_enemy" parent="." instance=ExtResource("15_w2yuk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8132, 1.05085, 22.3221)
