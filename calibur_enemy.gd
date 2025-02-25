@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@onready var atk_area = $AttackArea
+@onready var atk_area = $AttackArea_stab
 @onready var dmg_area = $DamageArea
 @onready var nav_agent = $NavigationAgent3D
 @onready var animator = $Sketchfab_Scene/AnimationPlayer
@@ -31,9 +31,11 @@ func _physics_process(delta: float) -> void:
 			await animator.animation_finished
 	var dir = (nav_agent.target_position-self.global_position)
 	dir.y = 0
-	if dir.length() > 0.01:
+	if dir.length() > 0.5:
 		var rot_angle = atan2(dir.x, dir.z)
 		self.rotation.y = lerp_angle(rotation.y, rot_angle, 5 * delta)
+	else:
+		dir = Vector3.ZERO
 	velocity = velocity.lerp(dir.normalized() * SPEED, ACCEL * delta)
 	
 	if not is_on_floor():
@@ -41,12 +43,13 @@ func _physics_process(delta: float) -> void:
 	
 	if animator.current_animation != "Attack1":
 		if velocity.length() <= 1:
-			animator.stop(true)
 			animator.play("Idle")
 		elif SPEED == WALKSPEED:
 			animator.play("Walk")
 		elif SPEED == RUNSPEED:
 			animator.play("Walk")
+			
+		
 	
 	move_and_slide()
 
