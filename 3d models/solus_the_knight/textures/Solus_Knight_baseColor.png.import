@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr0po55mqyl47"
-path.s3tc="res://.godot/imported/robo_obj_pose4_0.jpg-5bdf4b851c9b2394e192045391f66235.s3tc.ctex"
+uid="uid://cniahpq5l0jjm"
+path.s3tc="res://.godot/imported/Solus_Knight_baseColor.png-cc7f656fff39be17025d3ff531d32f66.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "5ac266c5cdd583c1f5b0fe399311cfec"
-}
 
 [deps]
 
-source_file="res://3d models/robo_obj_pose4_0.jpg"
-dest_files=["res://.godot/imported/robo_obj_pose4_0.jpg-5bdf4b851c9b2394e192045391f66235.s3tc.ctex"]
+source_file="res://3d models/solus_the_knight/textures/Solus_Knight_baseColor.png"
+dest_files=["res://.godot/imported/Solus_Knight_baseColor.png-cc7f656fff39be17025d3ff531d32f66.s3tc.ctex"]
 
 [params]
 

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bavcugwkenlpg"
-path.s3tc="res://.godot/imported/robo_obj_pose4_3.jpg-9cebee0395076533eba11fa1d8aafc3a.s3tc.ctex"
+uid="uid://dr0po55mqyl47"
+path.s3tc="res://.godot/imported/robo_obj_pose4_0.jpg-af2383e8a6b5431489ed16721c969709.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "f44f56649048ede6f13bcd51c6d4969d"
+"md5": "5ac266c5cdd583c1f5b0fe399311cfec"
 }
 
 [deps]
 
-source_file="res://3d models/robo_obj_pose4_3.jpg"
-dest_files=["res://.godot/imported/robo_obj_pose4_3.jpg-9cebee0395076533eba11fa1d8aafc3a.s3tc.ctex"]
+source_file="res://3d models/robot_obj/robo_obj_pose4_0.jpg"
+dest_files=["res://.godot/imported/robo_obj_pose4_0.jpg-af2383e8a6b5431489ed16721c969709.s3tc.ctex"]
 
 [params]
 
@@ -23,12 +23,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://3d models/robo_obj_pose4_3.jpg"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

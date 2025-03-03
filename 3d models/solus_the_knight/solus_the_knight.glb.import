@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cmvcp20o4f0j0"
-path="res://.godot/imported/robo_obj_pose4.glb-b53742bdd8b3bc29fa7e86c74fed15b8.scn"
+uid="uid://cl5vutm67r3as"
+path="res://.godot/imported/solus_the_knight.glb-55343838073576dd39118072159f6d21.scn"
 
 [deps]
 
-source_file="res://3d models/robo_obj_pose4.glb"
-dest_files=["res://.godot/imported/robo_obj_pose4.glb-b53742bdd8b3bc29fa7e86c74fed15b8.scn"]
+source_file="res://3d models/solus_the_knight/solus_the_knight.glb"
+dest_files=["res://.godot/imported/solus_the_knight.glb-55343838073576dd39118072159f6d21.scn"]
 
 [params]
 

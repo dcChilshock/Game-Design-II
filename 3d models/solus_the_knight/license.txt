@@ -1,0 +1,11 @@
+Model Information:
+* title:	Solus The Knight
+* source:	https://sketchfab.com/3d-models/solus-the-knight-566d1224b48e4765acad9593bd9637b8
+* author:	manoeldarochadeoliveira (https://sketchfab.com/manoeldarochadeoliveira)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Solus The Knight" (https://sketchfab.com/3d-models/solus-the-knight-566d1224b48e4765acad9593bd9637b8) by manoeldarochadeoliveira (https://sketchfab.com/manoeldarochadeoliveira) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

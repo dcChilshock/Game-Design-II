@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3eearj0tgm6k"
-path.s3tc="res://.godot/imported/robo_obj_pose4_2.jpg-a028594faba67e36471db1fb030698e2.s3tc.ctex"
+path.s3tc="res://.godot/imported/robo_obj_pose4_2.jpg-204b82465b6dbf59ed5adb6eb75d2c55.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://3d models/robo_obj_pose4_2.jpg"
-dest_files=["res://.godot/imported/robo_obj_pose4_2.jpg-a028594faba67e36471db1fb030698e2.s3tc.ctex"]
+source_file="res://3d models/robot_obj/robo_obj_pose4_2.jpg"
+dest_files=["res://.godot/imported/robo_obj_pose4_2.jpg-204b82465b6dbf59ed5adb6eb75d2c55.s3tc.ctex"]
 
 [params]
 
