@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clbiv4gglguje"
+uid="uid://bm7vh16v70o4d"
 path.s3tc="res://.godot/imported/sword_1.png-202826317b1224f2ce08d3b7b6500383.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
@@ -28,7 +28,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=8
-roughness/src_normal="res://3d models/sword_2.png"
+roughness/src_normal="res://sword_2.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

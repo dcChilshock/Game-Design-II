@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dungeon Stairs type 3
+* source:	https://sketchfab.com/3d-models/dungeon-stairs-type-3-9233d16c81dc44d4a3ac4143df0d9590
+* author:	C. Anastasiadis (https://sketchfab.com/bagatir)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dungeon Stairs type 3" (https://sketchfab.com/3d-models/dungeon-stairs-type-3-9233d16c81dc44d4a3ac4143df0d9590) by C. Anastasiadis (https://sketchfab.com/bagatir) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

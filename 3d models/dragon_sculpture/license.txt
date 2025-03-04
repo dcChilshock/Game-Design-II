@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dragon Sculpture
+* source:	https://sketchfab.com/3d-models/dragon-sculpture-6b997aff05bd47daa5cc392a45d9f43f
+* author:	Moøkan (https://sketchfab.com/mookan)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dragon Sculpture" (https://sketchfab.com/3d-models/dragon-sculpture-6b997aff05bd47daa5cc392a45d9f43f) by Moøkan (https://sketchfab.com/mookan) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
