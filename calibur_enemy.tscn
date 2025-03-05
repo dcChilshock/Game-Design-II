@@ -118,6 +118,12 @@ transform = Transform3D(1, 0, 0, 0, -1.19209e-07, -1, 0, 1, -1.19209e-07, 0.0043
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00416607, -1.34385, -0.165901)
 shape = SubResource("ConcavePolygonShape3D_iyjfr")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="animation_changed" from="Sketchfab_Scene/AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
 [connection signal="animation_finished" from="Sketchfab_Scene/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="Sketchfab_Scene"]

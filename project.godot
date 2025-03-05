@@ -15,6 +15,10 @@ run/main_scene="res://cutscene_1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/vsync/vsync_mode=0
+
 [editor]
 
 movie_writer/disable_vsync=true
@@ -86,5 +90,6 @@ teleport={
 
 [rendering]
 
+occlusion_culling/bvh_build_quality=1
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
