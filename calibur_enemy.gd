@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@onready var hit_area = $"Sketchfab_Scene/Sketchfab_model/470fbca5ee3345d09f1c05d26df614bd_fbx/Object_2/RootNode/Armature/Object_8/Skeleton3D/Object_15/HitArea"
+@onready var hit_area = $HitArea
 @onready var nav_agent = $NavigationAgent3D
 @onready var animator = $Sketchfab_Scene/AnimationPlayer
 @onready var dmg_area = $DamageArea
@@ -64,8 +64,8 @@ func _ready():
 	nav_agent.target_position = global_position
 
 
-func _on_animation_player_animation_changed(old_name: StringName, new_name: StringName) -> void:
-	if animator.current_animation() == "Walk" and animator.current_animation() == "Idle":
-		pass
-	else:
-		timer.start()
+#func _on_animation_player_animation_changed(old_name: StringName, new_name: StringName) -> void:
+	#if animator.current_animation() == "Walk" and animator.current_animation() == "Idle":
+		#pass
+	#else:
+		#timer.start()
