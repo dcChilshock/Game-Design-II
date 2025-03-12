@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cl046k35nsjif"]
 
-[ext_resource type="Script" path="res://goal.gd" id="1_swodg"]
+[ext_resource type="Script" uid="uid://2iubrt0q3gw5" path="res://goal.gd" id="1_swodg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt8w8"]
 transparency = 1

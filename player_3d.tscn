@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://duxtr160wi40i"]
 
-[ext_resource type="Script" path="res://player_3d.gd" id="1_853gj"]
+[ext_resource type="Script" uid="uid://cd6xw1h58ts46" path="res://player_3d.gd" id="1_853gj"]
 [ext_resource type="PackedScene" uid="uid://bhqjlyugtoo4k" path="res://playerhud_3d.tscn" id="2_871gg"]
 [ext_resource type="PackedScene" uid="uid://bo1a7hoxixeco" path="res://3d models/characters/gobot.glb" id="3_htdsb"]
 

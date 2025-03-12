@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dr8lfhmwttj46"]
 
-[ext_resource type="Script" path="res://addons/sketchfab/ModelDialog.gd" id="1"]
-[ext_resource type="Script" path="res://addons/sketchfab/HttpImage.gd" id="2"]
+[ext_resource type="Script" uid="uid://b0khspqulh4uh" path="res://addons/sketchfab/ModelDialog.gd" id="1"]
+[ext_resource type="Script" uid="uid://c7ybf0guout2m" path="res://addons/sketchfab/HttpImage.gd" id="2"]
 
 [node name="ModelDialog" type="Window"]
 size = Vector2i(650, 523)

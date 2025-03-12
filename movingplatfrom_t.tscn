@@ -46,8 +46,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hd2ki"]
 _data = {
-"RESET": SubResource("Animation_3irxl"),
-"move": SubResource("Animation_sji1v")
+&"RESET": SubResource("Animation_3irxl"),
+&"move": SubResource("Animation_sji1v")
 }
 
 [node name="Movingplatfrom_t" type="Node3D"]

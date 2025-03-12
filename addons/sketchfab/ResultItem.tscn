@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtwqjq4siv6g6"]
 
-[ext_resource type="Script" path="res://addons/sketchfab/ResultItem.gd" id="1"]
-[ext_resource type="Script" path="res://addons/sketchfab/HttpImage.gd" id="2"]
+[ext_resource type="Script" uid="uid://dxwi0qw8u1r27" path="res://addons/sketchfab/ResultItem.gd" id="1"]
+[ext_resource type="Script" uid="uid://c7ybf0guout2m" path="res://addons/sketchfab/HttpImage.gd" id="2"]
 
 [node name="ResultItem" type="MarginContainer"]
 size_flags_horizontal = 3

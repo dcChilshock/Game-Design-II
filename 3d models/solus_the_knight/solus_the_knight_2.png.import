@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djdfm0hiv240s"
+uid="uid://i6xs4p3e5r7b"
 path.s3tc="res://.godot/imported/solus_the_knight_2.png-25ed81692b44dc4847b7470da97b16eb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "e515349aea871cdb04efa88ae276b276"
 }
 
 [deps]
@@ -28,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://solus_the_knight_2.png"
+roughness/src_normal="res://3d models/solus_the_knight/solus_the_knight_2.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

@@ -159,8 +159,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_il4lf"]
 _data = {
-"Cutscene1": SubResource("Animation_h8ikg"),
-"RESET": SubResource("Animation_wfnry")
+&"Cutscene1": SubResource("Animation_h8ikg"),
+&"RESET": SubResource("Animation_wfnry")
 }
 
 [node name="cutscene1" type="Node3D"]

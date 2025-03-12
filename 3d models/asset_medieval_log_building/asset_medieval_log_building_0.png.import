@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m87fj3igheoh"
+uid="uid://cu3td702cf7gp"
 path.s3tc="res://.godot/imported/asset_medieval_log_building_0.png-9671cdb54a94b069295d9157f424f723.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "2ecc9defcfd8f70839df8b551c99ec95"
 }
 
 [deps]

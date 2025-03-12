@@ -1,9 +1,9 @@
 [gd_scene load_steps=26 format=4 uid="uid://bk567wrfqnqbl"]
 
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_atqss"]
+[ext_resource type="Script" uid="uid://b34qki7idjh61" path="res://addons/zylann.hterrain/hterrain.gd" id="1_atqss"]
 [ext_resource type="Texture2D" uid="uid://cw0nnx3p7yt2h" path="res://Textures/Skyboxes/DaySkyHDRI008A_1K-HDR.exr" id="1_o4liq"]
-[ext_resource type="Resource" path="res://Terrains/scene_3d_2/data.hterrain" id="2_l7mga"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ckup5"]
+[ext_resource type="Resource" uid="uid://ctht6tkpngi5i" path="res://Terrains/scene_3d_2/data.hterrain" id="2_l7mga"]
+[ext_resource type="Script" uid="uid://dk7uya5nieabq" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ckup5"]
 [ext_resource type="Texture2D" uid="uid://dyhlt6c2uxbm7" path="res://Textures/Ground068/Ground068_1K-JPG_Color.jpg" id="4_4qxib"]
 [ext_resource type="Texture2D" uid="uid://cwjd4mjekbbqr" path="res://Textures/PavingStones138/PavingStones138_1K-JPG_Color.jpg" id="6_e8ttk"]
 [ext_resource type="Texture2D" uid="uid://hl5i2rojwuio" path="res://Textures/Ground068/Ground068_1K-JPG_NormalGL.jpg" id="6_i5q5l"]
