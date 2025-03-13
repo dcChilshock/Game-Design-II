@@ -245,7 +245,7 @@ transform = Transform3D(1, 0, 0, 0, -0.0138232, 0.999904, 0, -0.999904, -0.01382
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_il4lf")
+&"": SubResource("AnimationLibrary_il4lf")
 }
 autoplay = "Cutscene1"
 
