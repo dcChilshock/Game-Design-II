@@ -24,6 +24,17 @@ var t_bob = 0.0
 var damage_shader = preload("res://Shader/take_damage.tres")
 @onready var head = $Head
 
+var blaster 
+var muzzle 
+var old_blaster_y
+var dart_scene = preload("res://fps_dart.tscn")
+
+var spray_lock = 0.0 # prevent infinite spray
+var NORMAL_SPRAY_AMOUNT = 0.03
+var CROUCH_SPRAY_AMOUNT = 0.01
+var SPRAY_AMOUNT = NORMAL_SPRAY_AMOUNT 
+var FIRING_DELAY = 0.075
+var ATTACK = 5.0
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -57,6 +68,11 @@ func _physics_process(delta):
 	velocity += inertia
 	inertia = inertia.move_toward(Vector3(), delta * 1000.0)
 	
+	if Input.is_action_just_pressed("fire"):
+		do_fire()
+	spray_lock = max(spray_lock - delta,0.0)
+	
+	#todo ammo stuff
 	move_and_slide()
 	
 	if int(HEALTH) <= 0:
@@ -79,7 +95,6 @@ func _physics_process(delta):
 	
 	pass
 
-
 func take_damage(dmg, override=false, headshot=false, _spawn_origin=null):
 	if damage_lock == 0.0 or override:
 		damage_lock = 0.5
@@ -88,16 +103,28 @@ func take_damage(dmg, override=false, headshot=false, _spawn_origin=null):
 		$HUD/overlay.material = damage_shader.duplicate()
 		$HUD/overlay.material.set_shader_parameter("intensity", dmg_intensity)
 
-
 func headbob(time):
 	var pos = Vector3.ZERO
 	pos.x = cos(time * BOB_FREQ / 2) * (BOB_AMP/2.0)
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	return pos
 
-
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	blaster = $Head/Camera3D/blaster
+	muzzle = $Head/Camera3D/blaster/muzzle
+	old_blaster_y = blaster.position.y 
+
+func do_fire():
+	if spray_lock == 0.0: #TODO: and ammo
+		var dart = dart_scene.instantiate()
+		add_child(dart)
+		var spray = SPRAY_AMOUNT
+		if not is_on_floor():
+			spray *= randf_range(1.5,5)
+		dart.do_fire(camera,muzzle,spray,ATTACK)
+		# TODO: ammo -= 1
+		spray_lock = FIRING_DELAY
 
 
 func _unhandled_input(event):

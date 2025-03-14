@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2hv3elprw2ee"]
+[gd_scene load_steps=6 format=3 uid="uid://d2hv3elprw2ee"]
 
 [ext_resource type="Script" uid="uid://jpgjfvch7qq3" path="res://3d models/fps models/fps_player_template.gd" id="1_eoxvl"]
-[ext_resource type="PackedScene" uid="uid://dnn6xldq056f8" path="res://3d models/fps models/banana_pistol.glb" id="2_xnypm"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_s15q6"]
 
@@ -34,16 +33,11 @@ near = 0.25
 
 [node name="blaster" type="CSGBox3D" parent="Head/Camera3D"]
 transform = Transform3D(0.595568, 0.173252, 0.324473, 0, 0.617489, -0.329708, -0.36783, 0.280519, 0.525366, 0.219, -0.27, -0.421)
-visible = false
 size = Vector3(0.128687, 0.145801, 0.697644)
 material = SubResource("StandardMaterial3D_y7p1v")
 
 [node name="muzzle" type="CSGCylinder3D" parent="Head/Camera3D/blaster"]
 transform = Transform3D(1, 2.32831e-10, 5.82077e-11, 1.16415e-10, -2.98023e-08, 1, 0, -1, -4.47035e-08, -0.00586492, -0.0017724, -0.364076)
-visible = false
 radius = 0.0568142
 height = 0.14681
 material = SubResource("StandardMaterial3D_aak7c")
-
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_xnypm")]
-transform = Transform3D(-0.169362, -0.00635316, 0.4704, 0.0551552, 0.496238, 0.0265602, -0.467198, 0.0608866, -0.167387, 0.182155, 0.510505, -0.6961)
