@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2hv3elprw2ee"]
+[gd_scene load_steps=7 format=3 uid="uid://d2hv3elprw2ee"]
 
 [ext_resource type="Script" uid="uid://jpgjfvch7qq3" path="res://3d models/fps models/fps_player_template.gd" id="1_eoxvl"]
+[ext_resource type="PackedScene" uid="uid://c4naq1f78lk8n" path="res://blaster.tscn" id="2_eoxvl"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_s15q6"]
 
@@ -36,8 +37,13 @@ transform = Transform3D(0.595568, 0.173252, 0.324473, 0, 0.617489, -0.329708, -0
 size = Vector3(0.128687, 0.145801, 0.697644)
 material = SubResource("StandardMaterial3D_y7p1v")
 
+[node name="blaster1" parent="Head/Camera3D/blaster" instance=ExtResource("2_eoxvl")]
+transform = Transform3D(0.012936, -0.0346191, 0.713329, -0.00187163, 0.713442, 0.0346585, -0.714166, -0.0024963, 0.0128295, -0.00524247, -0.0513163, -0.047918)
+
 [node name="muzzle" type="CSGCylinder3D" parent="Head/Camera3D/blaster"]
-transform = Transform3D(1, 2.32831e-10, 5.82077e-11, 1.16415e-10, -2.98023e-08, 1, 0, -1, -4.47035e-08, -0.00586492, -0.0017724, -0.364076)
+transform = Transform3D(1, -5.96046e-08, 2.38419e-07, 0, 3.27826e-07, 1, 2.98023e-08, -1, 5.06639e-07, -0.00540614, 0.0153397, -0.362498)
 radius = 0.0568142
 height = 0.14681
 material = SubResource("StandardMaterial3D_aak7c")
+
+[editable path="Head/Camera3D/blaster/blaster1"]

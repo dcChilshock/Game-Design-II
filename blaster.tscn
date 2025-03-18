@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4naq1f78lk8n"]
+
+[ext_resource type="PackedScene" uid="uid://dnn6xldq056f8" path="res://3d models/fps models/banana_pistol.glb" id="1_uyb60"]
+
+[node name="blaster" instance=ExtResource("1_uyb60")]
