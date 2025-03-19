@@ -42,7 +42,7 @@ light_energy = 0.5
 shadow_enabled = true
 
 [node name="Player3d" parent="." instance=ExtResource("1_xband")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67709, 0.194491, -0.724319)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67709, 0.383784, -0.724319)
 
 [node name="HTerrain" type="Node3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

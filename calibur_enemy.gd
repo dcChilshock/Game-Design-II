@@ -9,13 +9,13 @@ extends CharacterBody3D
 @onready var atk_stomp = $AttackArea_stomp
 @onready var timer = $Timer
 #var HEALTH = 1
-var SPEED = 10.0
-var ACCEL = 20
+var SPEED = 2.0
+var ACCEL = 10
 var ATTACK = 10
 var KNOCKBACK = 16.0
 var WALKSPEED = SPEED
 var RUNSPEED = SPEED * 1.5
-
+var anim = "Idle"
 
 func take_damage(_dmg):
 	#animator.play("Death")
@@ -30,9 +30,9 @@ func _physics_process(delta: float) -> void:
 			SPEED = WALKSPEED
 		if atk_stab.overlaps_body(player):
 			animator.play("Attack1")
-		if hit_area.overlaps_body(player):
-			if timer.timeout == true:
-				player.take_damage(ATTACK)
+			anim = "Attack1"
+			#if timer.timeout == true:
+				#player.take_damage(ATTACK)
 			player.inertia = (player.global_position-self.global_position).normalized() * KNOCKBACK
 			await animator.animation_finished
 	var dir = (nav_agent.target_position-self.global_position)
@@ -50,10 +50,13 @@ func _physics_process(delta: float) -> void:
 	if animator.current_animation != "Attack1":
 		if velocity.length() <= 1:
 			animator.play("Idle")
+			anim = "Idle"
 		elif SPEED == WALKSPEED:
 			animator.play("Walk")
+			anim = "Walk"
 		elif SPEED == RUNSPEED:
 			animator.play("Walk")
+			anim = "Walk"
 			
 	
 	
@@ -69,3 +72,9 @@ func _ready():
 		#pass
 	#else:
 		#timer.start()
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	animator.stop()
+	if anim == "Attack1":
+		pass
