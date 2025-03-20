@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbv5fl87utgwv"]
+[gd_scene load_steps=5 format=3 uid="uid://cbv5fl87utgwv"]
 
 [ext_resource type="Script" uid="uid://by4l5ve14quw2" path="res://fps_dart.gd" id="1_gylib"]
+[ext_resource type="AudioStream" uid="uid://chxes3ie24i14" path="res://Sound/fire.wav" id="2_ke3cv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ke3cv"]
 albedo_color = Color(0.406835, 0.497778, 0.48426, 1)
@@ -10,6 +11,7 @@ height = 0.095
 radius = 0.02
 
 [node name="fps_dart" type="RigidBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_gylib")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
@@ -27,3 +29,9 @@ shape = SubResource("CylinderShape3D_pdg0w")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_ke3cv")
+volume_db = -15.0
+autoplay = true
+doppler_tracking = 2

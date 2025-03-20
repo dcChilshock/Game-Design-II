@@ -46,4 +46,7 @@ radius = 0.0568142
 height = 0.14681
 material = SubResource("StandardMaterial3D_aak7c")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+volume_db = -15.0
+
 [editable path="Head/Camera3D/blaster/blaster1"]

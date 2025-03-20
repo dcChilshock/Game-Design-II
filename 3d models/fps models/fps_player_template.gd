@@ -58,6 +58,10 @@ var target_pos = unaim_pos
 var target_quat = unaim_quat
 var target_fov = unaim_fov
 
+@onready var audio_player = $AudioStreamPlayer3D
+var reload_sound = preload("res://Sound/recharge.mp3")
+var hit_sound = preload("res://Sound/hitHurt.wav")
+var dink_sound = preload("res://Sound/hitHead.wav")
 func degrees_to_radians(degrees: Vector3) -> Vector3:
 	return Vector3(
 		deg_to_rad(degrees.x),
@@ -120,7 +124,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("reload") or (Input.is_action_just_pressed("fire") and AMMO==0):
 		if TOTAL_AMMO > 0 and not is_reloading and AMMO != CLIP_SIZE:
 			is_reloading = true
-			# TODO PLAYSOUND
+			audio_player.stream = reload_sound
+			audio_player.play()
 			await get_tree().create_timer(2).timeout
 			var ammo_needed = CLIP_SIZE - AMMO 
 			var new_ammo = min(ammo_needed, TOTAL_AMMO)
@@ -173,6 +178,7 @@ func _physics_process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		OS.alert("You win!")
 		# todo: change scene 
+		get_tree().quit()
 		
 	# Right Joystick
 	var joystick_index = 0
@@ -194,6 +200,10 @@ func take_damage(dmg, override=false, headshot=false, _spawn_origin=null):
 		var dmg_intensity = clamp(1.0-((HEALTH+0.01)/MAX_HEALTH), 0.1, 0.8)
 		$HUD/overlay.material = damage_shader.duplicate()
 		$HUD/overlay.material.set_shader_parameter("intensity", dmg_intensity)
+		if audio_player.playing:
+			await audio_player.finished
+		audio_player.stream = dink_sound if headshot else hit_sound
+		audio_player.play()
 
 func headbob(time):
 	var pos = Vector3.ZERO
@@ -208,14 +218,14 @@ func _ready():
 	old_blaster_y = blaster.position.y 
 
 func do_fire():
-	if spray_lock == 0.0: #TODO: and ammo
+	if spray_lock == 0.0 and AMMO > 0: #TODO: and ammo
 		var dart = dart_scene.instantiate()
 		add_child(dart)
 		var spray = SPRAY_AMOUNT
 		if not is_on_floor():
 			spray *= randf_range(1.5,5)
 		dart.do_fire(camera,muzzle,spray,ATTACK)
-		# TODO: ammo -= 1
+		AMMO -= 1
 		spray_lock = FIRING_DELAY
 
 

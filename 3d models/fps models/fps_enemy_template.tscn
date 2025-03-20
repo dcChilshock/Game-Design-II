@@ -13,9 +13,10 @@ albedo_color = Color(0.741176, 0, 0.141176, 1)
 radius = 8.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xh5je"]
-radius = 0.672162
+radius = 0.555099
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tdmhl"]
+radius = 0.476217
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ld2ym"]
 albedo_color = Color(0, 0, 1, 1)
@@ -51,7 +52,7 @@ shape = SubResource("CapsuleShape3D_xh5je")
 [node name="DamageArea" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DamageArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781363, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.636551, 0)
 shape = SubResource("SphereShape3D_tdmhl")
 
 [node name="blaster" type="CSGBox3D" parent="."]
@@ -73,5 +74,12 @@ near = 0.001
 
 [node name="HuntTimer" type="Timer" parent="."]
 wait_time = 15.0
+
+[node name="lblHealth" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13034, 0)
+text = "100/100"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+volume_db = -15.0
 
 [connection signal="timeout" from="HuntTimer" to="." method="_on_timer_timeout"]
