@@ -135,7 +135,10 @@ func _physics_process(delta):
 	
 	#TODO HUD STUFF 
 	#TODO AIMING DOWN SIGHT
-	
+	$HUD/Label/lblHealth.text = "%d/%d" % [int(HEALTH), MAX_HEALTH]
+	$HUD/Label2/lblAmmo.text = "%d/%d" % [int(AMMO), TOTAL_AMMO]
+	if damage_lock == 0.0:
+		$HUD/overlay.material = null
 	if Input.is_action_pressed("aim_sight"):
 		target_pos = aim_pos
 		target_quat = aim_quat
@@ -173,7 +176,7 @@ func _physics_process(delta):
 		OS.alert("You died!")
 		get_tree().reload_current_scene()
 	
-	if len(get_tree().get_nodes_in_group("Enemy")) <= 0:
+	elif len(get_tree().get_nodes_in_group("Enemy")) <= 0:
 		await get_tree().create_timer(0.25).timeout
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		OS.alert("You win!")

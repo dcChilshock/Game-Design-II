@@ -77,4 +77,4 @@ func _ready():
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	animator.stop()
 	if anim == "Attack1":
-		pass
+		

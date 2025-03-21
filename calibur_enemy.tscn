@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://baskf6wqi6kph" path="res://VGC models/Calibur/calibur__vgdc.glb" id="2_sl7ya"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uga4a"]
-radius = 0.648669
-height = 2.7948
+radius = 0.521318
+height = 2.45744
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1beea"]
 radius = 0.846896
@@ -27,7 +27,7 @@ radius = 1.02214
 script = ExtResource("1_20y01")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18776, 1.08482, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18776, 1.25377, -0.0432153)
 shape = SubResource("CapsuleShape3D_uga4a")
 
 [node name="DamageArea" type="Area3D" parent="."]
