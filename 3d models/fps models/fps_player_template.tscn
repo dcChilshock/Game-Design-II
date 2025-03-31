@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d2hv3elprw2ee"]
+[gd_scene load_steps=11 format=3 uid="uid://d2hv3elprw2ee"]
 
 [ext_resource type="Script" uid="uid://jpgjfvch7qq3" path="res://3d models/fps models/fps_player_template.gd" id="1_eoxvl"]
 [ext_resource type="PackedScene" uid="uid://c4naq1f78lk8n" path="res://blaster.tscn" id="2_eoxvl"]
@@ -24,6 +24,9 @@ font_size = 28
 
 [sub_resource type="LabelSettings" id="LabelSettings_rwnfa"]
 font_size = 28
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_eoxvl"]
+length = 0.653374
 
 [node name="fps_player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_eoxvl")
@@ -99,7 +102,7 @@ offset_left = 968.0
 offset_top = 2.0
 offset_right = 1066.0
 offset_bottom = 41.0
-text = "Health:"
+text = "Ammo:"
 label_settings = SubResource("LabelSettings_eoxvl")
 
 [node name="lblAmmo" type="Label" parent="HUD/Label2"]
@@ -121,5 +124,9 @@ grow_vertical = 2
 text = "+"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, -0.314002, -0.558131)
+shape = SubResource("SeparationRayShape3D_eoxvl")
 
 [editable path="Head/Camera3D/blaster/blaster1"]
