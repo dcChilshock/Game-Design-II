@@ -9,11 +9,11 @@ var MAX_HEALTH = 100
 var HEALTH = MAX_HEALTH
 var damage_lock = 0.0  # Prevent infinite damage
 var inertia = Vector3()
-
+var anim = "Armature"
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 1.5
 
-
+@onready var animator = $Head/Camera3D/Sketchfab_Scene/AnimationPlayer
 @onready var camera = $Head/Camera3D
 var CAM_SENSITIVITY = 0.02
 const BOB_FREQ = 2.4
@@ -23,9 +23,9 @@ var t_bob = 0.0
 
 var damage_shader = preload("res://Shader/take_damage.tres")
 @onready var head = $Head
-
-var blaster 
-var muzzle 
+@onready var ray = $CollisionShape3D2
+var blaster
+var muzzle
 var old_blaster_y
 var dart_scene = preload("res://fps_dart.tscn")
 
@@ -81,21 +81,28 @@ func radians_to_degrees(radians: Vector3) -> Vector3:
 func euler_degrees_to_quat(euler_degrees: Vector3) -> Quaternion:
 	return Quaternion.from_euler(degrees_to_radians(euler_degrees))
 
-func _physics_process(delta):
+func _physics_process(delta): 
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		get_node("CollisionShape3D2").disabled=true
+	else:
+		get_node("CollisionShape3D2").disabled=false
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
 
 	if Input.is_action_pressed("walk") or Input.is_action_pressed("crouch"):
 		SPEED = WALK_SPEED
+		animator.play("Armature|FPS_Pistol_Walk")
 	else:
 		SPEED = NORMAL_SPEED
+		animator.play("Armature|FPS_Pistol_Walk")
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -118,9 +125,12 @@ func _physics_process(delta):
 	inertia = inertia.move_toward(Vector3(), delta * 1000.0)
 	
 	if Input.is_action_just_pressed("fire"):
+		animator.play("Armature|FPS_Pistol_Fire")
 		do_fire()
 	spray_lock = max(spray_lock - delta,0.0)
 	
+	if Input.is_action_just_pressed("reload"):
+		animator.play("Armature|FPS_Pistol_Reload_easy")
 	if Input.is_action_just_pressed("reload") or (Input.is_action_just_pressed("fire") and AMMO==0):
 		if TOTAL_AMMO > 0 and not is_reloading and AMMO != CLIP_SIZE:
 			is_reloading = true
@@ -133,8 +143,6 @@ func _physics_process(delta):
 			TOTAL_AMMO -= new_ammo
 			is_reloading = false
 	
-	#TODO HUD STUFF 
-	#TODO AIMING DOWN SIGHT
 	$HUD/Label/lblHealth.text = "%d/%d" % [int(HEALTH), MAX_HEALTH]
 	$HUD/Label2/lblAmmo.text = "%d/%d" % [int(AMMO), TOTAL_AMMO]
 	if damage_lock == 0.0:
@@ -166,7 +174,13 @@ func _physics_process(delta):
 		$MeshInstance3D.scale.y = 1.0
 		$Head.position.y = lerp($Head.position.y, NORMAL_HEAD,delta*5.0)
 		SPRAY_AMOUNT = NORMAL_SPRAY_AMOUNT
-	
+		
+	if animator.current_animation != "Armature|FPS_Pistol_Fire":
+		if velocity.length() <= 1:
+			animator.play("Armature|FPS_Pistol_Idle")
+		else:
+			animator.play("Armature|FPS_Pistol_Walk")
+		
 	move_and_slide()
 	
 	if int(HEALTH) <= 0:

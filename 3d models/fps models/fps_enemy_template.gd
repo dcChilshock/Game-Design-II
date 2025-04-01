@@ -48,9 +48,10 @@ func _physics_process(delta):
 			if spray_lock == 0.0 and is_player_in_sight(player):
 				var dart = dart_scene.instantiate()
 				add_child(dart)
+				print("its working")
 				dart.do_fire($Camera3D,muzzle,SPRAY_AMOUNT,ATTACK)
 				spray_lock = 0.2
-				spray_lock = max(spray_lock - delta, 0.0)
+	spray_lock = max(spray_lock - delta, 0.0)
 	var dir = (nav_agent.target_position - global_position).normalized()
 	velocity = velocity.lerp(dir * SPEED, ACCEL * delta)
 	if nav_agent.target_position == Vector3.ZERO:
