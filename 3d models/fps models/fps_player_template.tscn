@@ -44,10 +44,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.773944, 0)
 current = true
 near = 0.25
 
-[node name="Sketchfab_Scene" parent="Head/Camera3D" instance=ExtResource("2_eoxvl")]
-transform = Transform3D(-0.999367, -0.00282792, -0.0354681, -0.00699737, 0.99299, 0.117989, 0.0348857, 0.118162, -0.992381, 0.131302, -0.260731, -0.18354)
+[node name="Gun" type="Node3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.773944, 0)
 
-[node name="Skeleton3D" parent="Head/Camera3D/Sketchfab_Scene/Sketchfab_model/3ab9f780f2294ec8ba398c31f25c6b54_fbx/Object_2/RootNode/Armature/Object_6" index="0"]
+[node name="blaster" type="CSGBox3D" parent="Head/Camera3D/Gun"]
+transform = Transform3D(0.595568, 0.173252, 0.324473, -0.107918, 0.672616, -0.161062, -0.351643, 0.0870093, 0.598979, 0.219, 0.562224, -0.421)
+size = Vector3(0.128687, 0.145801, 0.697644)
+material = SubResource("StandardMaterial3D_y7p1v")
+
+[node name="muzzle" type="CSGCylinder3D" parent="Head/Camera3D/Gun/blaster"]
+transform = Transform3D(1, -5.96046e-08, 2.38419e-07, 0, 3.27826e-07, 1, 2.98023e-08, -1, 5.06639e-07, -0.00540614, 0.0153397, -0.362498)
+radius = 0.0568142
+height = 0.14681
+material = SubResource("StandardMaterial3D_aak7c")
+
+[node name="Sketchfab_Scene" parent="Head/Camera3D/Gun/blaster" instance=ExtResource("2_eoxvl")]
+transform = Transform3D(-1.39044, 0.0484361, 0.324264, 0.0500042, 1.4277, 0.00115924, -0.324026, 0.0124785, -1.39128, -0.187867, -0.119488, 0.303507)
+
+[node name="Skeleton3D" parent="Head/Camera3D/Gun/blaster/Sketchfab_Scene/Sketchfab_model/3ab9f780f2294ec8ba398c31f25c6b54_fbx/Object_2/RootNode/Armature/Object_6" index="0"]
 bones/3/rotation = Quaternion(-0.621273, -0.127523, 0.464384, 0.618147)
 bones/4/rotation = Quaternion(-0.651004, -0.13908, -0.054475, 0.744233)
 bones/6/rotation = Quaternion(-2.27714e-08, -0.391395, 1.11317e-07, 0.920223)
@@ -82,20 +96,9 @@ bones/69/rotation = Quaternion(0.00799566, 0.00803803, -0.243799, 0.969759)
 bones/70/rotation = Quaternion(0.00169603, 0.00108057, -0.269573, 0.962978)
 bones/74/position = Vector3(-0.0789441, -0.0277207, 0.350215)
 bones/74/rotation = Quaternion(0.133399, 0.0266774, -0.126298, 0.98262)
+bones/75/position = Vector3(0.0166999, 0.153454, -0.0245793)
 bones/79/position = Vector3(-0.0828505, -0.0312708, 0.356867)
 bones/79/rotation = Quaternion(0.00242847, 0.0231926, -0.130621, 0.991158)
-
-[node name="blaster" type="CSGBox3D" parent="Head/Camera3D"]
-transform = Transform3D(0.595568, 0.173252, 0.324473, 0, 0.617489, -0.329708, -0.36783, 0.280519, 0.525366, 0.219, -0.27, -0.421)
-visible = false
-size = Vector3(0.128687, 0.145801, 0.697644)
-material = SubResource("StandardMaterial3D_y7p1v")
-
-[node name="muzzle" type="CSGCylinder3D" parent="Head/Camera3D/blaster"]
-transform = Transform3D(1, -5.96046e-08, 2.38419e-07, 0, 3.27826e-07, 1, 2.98023e-08, -1, 5.06639e-07, -0.00540614, 0.0153397, -0.362498)
-radius = 0.0568142
-height = 0.14681
-material = SubResource("StandardMaterial3D_aak7c")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 volume_db = -15.0
@@ -168,4 +171,4 @@ vertical_alignment = 1
 transform = Transform3D(1, -5.96046e-08, -4.47035e-08, -2.98023e-08, -5.96046e-08, -1, 0, 1, -1.19209e-07, -7.45058e-08, -0.314002, -0.558131)
 shape = SubResource("SeparationRayShape3D_eoxvl")
 
-[editable path="Head/Camera3D/Sketchfab_Scene"]
+[editable path="Head/Camera3D/Gun/blaster/Sketchfab_Scene"]

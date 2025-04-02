@@ -17,7 +17,7 @@ func _on_timer_timeout() -> void:
 	queue_free()
 	
 func _physics_process(delta: float) -> void:
-	linear_velocity.y -= gravity * delta 
+	linear_velocity.y -= (gravity * delta) / 2
 	do_damage("player")
 	do_damage("Enemy")
 

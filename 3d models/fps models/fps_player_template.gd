@@ -13,7 +13,7 @@ var anim = "Armature"
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 1.5
 
-@onready var animator = $Head/Camera3D/Sketchfab_Scene/AnimationPlayer
+@onready var animator = $Head/Camera3D/Gun/blaster/Sketchfab_Scene/AnimationPlayer
 @onready var camera = $Head/Camera3D
 var CAM_SENSITIVITY = 0.02
 const BOB_FREQ = 2.4
@@ -57,7 +57,7 @@ var aim_quat = euler_degrees_to_quat(Vector3(11.6,0,0))
 var target_pos = unaim_pos
 var target_quat = unaim_quat
 var target_fov = unaim_fov
-
+#@onready var gun = $Head/Camera3D/Gun/Sketchfab_Scene
 @onready var audio_player = $AudioStreamPlayer3D
 var reload_sound = preload("res://Sound/recharge.mp3")
 var hit_sound = preload("res://Sound/hitHurt.wav")
@@ -159,7 +159,9 @@ func _physics_process(delta):
 		SPRAY_AMOUNT = NORMAL_SPRAY_AMOUNT
 	$Head/Camera3D.fov = lerp($Head/Camera3D.fov, target_fov,delta*5.0)
 	blaster.position = blaster.position.lerp(target_pos,delta*10.0)
+	#gun.position = blaster.position
 	blaster.position.y = clamp(old_blaster_y+(hbob.y*0.05 if is_on_floor() else 0), old_blaster_y-0.05,old_blaster_y+0.05)
+	#gun.position = blaster.position.y
 	var cur_quat = euler_degrees_to_quat(blaster.rotation_degrees)
 	blaster.rotation_degrees = radians_to_degrees(cur_quat.slerp(target_quat,delta*10.0).get_euler())
 	if Input.is_action_just_pressed("crouch"):
@@ -180,6 +182,9 @@ func _physics_process(delta):
 			animator.play("Armature|FPS_Pistol_Idle")
 		else:
 			animator.play("Armature|FPS_Pistol_Walk")
+	
+	if velocity:
+		ray.look_at(transform.origin + -velocity, Vector3.UP)
 		
 	move_and_slide()
 	
@@ -230,8 +235,8 @@ func headbob(time):
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	blaster = $Head/Camera3D/blaster
-	muzzle = $Head/Camera3D/blaster/muzzle
+	blaster = $Head/Camera3D/Gun/blaster
+	muzzle = $Head/Camera3D/Gun/blaster/muzzle
 	old_blaster_y = blaster.position.y 
 
 func do_fire():
