@@ -1,0 +1,11 @@
+Model Information:
+* title:	Combine Soldier
+* source:	https://sketchfab.com/3d-models/combine-soldier-6fa87ed8061b4bda85cd5b4b8bd7b7b2
+* author:	MrYoink (https://sketchfab.com/mryoinkie)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Combine Soldier" (https://sketchfab.com/3d-models/combine-soldier-6fa87ed8061b4bda85cd5b4b8bd7b7b2) by MrYoink (https://sketchfab.com/mryoinkie) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -7,14 +7,14 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_swrap"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7p1v"]
-albedo_color = Color(0, 0, 0.694118, 1)
-metallic = 1.0
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aak7c"]
 albedo_color = Color(1, 0.207843, 0.054902, 1)
 metallic = 1.0
 metallic_specular = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7p1v"]
+albedo_color = Color(0, 0, 0.694118, 1)
+metallic = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_eoxvl"]
 font_size = 28
@@ -42,26 +42,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.773944, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 current = true
+fov = 45.0
 near = 0.25
 
 [node name="Gun" type="Node3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.773944, 0)
 
-[node name="blaster" type="CSGBox3D" parent="Head/Camera3D/Gun"]
-transform = Transform3D(0.595568, 0.173252, 0.324473, -0.107918, 0.672616, -0.161062, -0.351643, 0.0870093, 0.598979, 0.219, 0.562224, -0.421)
-size = Vector3(0.128687, 0.145801, 0.697644)
-material = SubResource("StandardMaterial3D_y7p1v")
+[node name="blaster" parent="Head/Camera3D/Gun" instance=ExtResource("2_eoxvl")]
+transform = Transform3D(-0.983175, 0.182592, -0.00522327, 0.181792, 0.980861, 0.0697562, 0.0178603, 0.0676334, -0.997547, -0.13928, -0.271624, -0.157478)
 
-[node name="muzzle" type="CSGCylinder3D" parent="Head/Camera3D/Gun/blaster"]
-transform = Transform3D(1, -5.96046e-08, 2.38419e-07, 0, 3.27826e-07, 1, 2.98023e-08, -1, 5.06639e-07, -0.00540614, 0.0153397, -0.362498)
-radius = 0.0568142
-height = 0.14681
-material = SubResource("StandardMaterial3D_aak7c")
+[node name="Sketchfab_model" parent="Head/Camera3D/Gun/blaster" index="0"]
+transform = Transform3D(1, 0, -2.23517e-08, -7.45058e-09, -7.45058e-09, 1, 0, -1, -2.23517e-08, -0.0734434, 0.0245349, -0.0319151)
 
-[node name="Sketchfab_Scene" parent="Head/Camera3D/Gun/blaster" instance=ExtResource("2_eoxvl")]
-transform = Transform3D(-1.39044, 0.0484361, 0.324264, 0.0500042, 1.4277, 0.00115924, -0.324026, 0.0124785, -1.39128, -0.187867, -0.119488, 0.303507)
-
-[node name="Skeleton3D" parent="Head/Camera3D/Gun/blaster/Sketchfab_Scene/Sketchfab_model/3ab9f780f2294ec8ba398c31f25c6b54_fbx/Object_2/RootNode/Armature/Object_6" index="0"]
+[node name="Skeleton3D" parent="Head/Camera3D/Gun/blaster/Sketchfab_model/3ab9f780f2294ec8ba398c31f25c6b54_fbx/Object_2/RootNode/Armature/Object_6" index="0"]
 bones/3/rotation = Quaternion(-0.621273, -0.127523, 0.464384, 0.618147)
 bones/4/rotation = Quaternion(-0.651004, -0.13908, -0.054475, 0.744233)
 bones/6/rotation = Quaternion(-2.27714e-08, -0.391395, 1.11317e-07, 0.920223)
@@ -99,6 +91,19 @@ bones/74/rotation = Quaternion(0.133399, 0.0266774, -0.126298, 0.98262)
 bones/75/position = Vector3(0.0166999, 0.153454, -0.0245793)
 bones/79/position = Vector3(-0.0828505, -0.0312708, 0.356867)
 bones/79/rotation = Quaternion(0.00242847, 0.0231926, -0.130621, 0.991158)
+
+[node name="muzzle" type="CSGCylinder3D" parent="Head/Camera3D/Gun/blaster"]
+transform = Transform3D(-0.694982, 0.0716744, 0.0431656, 0.0446767, 0.0125576, 0.698458, 0.0707421, 0.696209, -0.0170423, -0.103845, 0.141023, 0.482573)
+visible = false
+radius = 0.0568142
+height = 0.14681
+material = SubResource("StandardMaterial3D_aak7c")
+
+[node name="blasterl" type="CSGBox3D" parent="Head/Camera3D/Gun"]
+transform = Transform3D(0.595568, 0.173252, 0.324473, -0.107918, 0.672616, -0.161062, -0.351643, 0.0870093, 0.598979, 0.219, -0.213431, -0.421)
+visible = false
+size = Vector3(0.128687, 0.145801, 0.697644)
+material = SubResource("StandardMaterial3D_y7p1v")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 volume_db = -15.0
@@ -171,4 +176,4 @@ vertical_alignment = 1
 transform = Transform3D(1, -5.96046e-08, -4.47035e-08, -2.98023e-08, -5.96046e-08, -1, 0, 1, -1.19209e-07, -7.45058e-08, -0.314002, -0.558131)
 shape = SubResource("SeparationRayShape3D_eoxvl")
 
-[editable path="Head/Camera3D/Gun/blaster/Sketchfab_Scene"]
+[editable path="Head/Camera3D/Gun/blaster"]

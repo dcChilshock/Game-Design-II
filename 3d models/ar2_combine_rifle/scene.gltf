@@ -1,0 +1,519 @@
+{
+  "accessors": [
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1138,
+      "max": [
+        4.738504886627197,
+        7.495631217956543,
+        25.593488693237305
+      ],
+      "min": [
+        -5.643648147583008,
+        -4.922159194946289,
+        -10.136455535888672
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 13656,
+      "componentType": 5126,
+      "count": 1138,
+      "max": [
+        0.9998429417610168,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999845623970032,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1138,
+      "max": [
+        0.9984319806098938,
+        1.0006330013275146
+      ],
+      "min": [
+        -0.8623780012130737,
+        0.007044999860227108
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 2028,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 7,
+      "max": [
+        100.00000762939453,
+        0.9989156723022461,
+        0.03680567815899849,
+        0.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.019878985360264778,
+        100.0,
+        0.0,
+        11.370532989501953,
+        0.8435683846473694,
+        1.640311360359192,
+        1.0
+      ],
+      "min": [
+        0.028518732637166977,
+        0.0,
+        0.0,
+        0.0,
+        -0.21578171849250793,
+        0.042104657739400864,
+        -0.9755334258079529,
+        0.0,
+        -0.9760251045227051,
+        0.0,
+        0.2167484313249588,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "type": "MAT4"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5123,
+      "count": 1138,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 1138,
+      "max": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "min": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "type": "VEC4"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "MrYoink (https://sketchfab.com/mryoinkie)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ar2-combine-rifle-4148225218b541f799f6344d5d871d4f",
+      "title": "AR2 Combine Rifle"
+    },
+    "generator": "Sketchfab-16.21.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 9104,
+      "byteStride": 8,
+      "name": "shortBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8112,
+      "byteOffset": 9104,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9104,
+      "byteOffset": 17216,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 27312,
+      "byteOffset": 26320,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 18208,
+      "byteOffset": 53632,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 448,
+      "byteOffset": 71840,
+      "name": "floatBufferViews"
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 72288,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_specular"
+  ],
+  "images": [
+    {
+      "uri": "textures/W_IRifle_baseColor.png"
+    },
+    {
+      "uri": "textures/W_IRifle_metallicRoughness.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.0
+        }
+      },
+      "name": "W_IRifle",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        },
+        "roughnessFactor": 0.8568603853463714
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "W_IRifle_reference_W_IRifle_0",
+      "primitives": [
+        {
+          "attributes": {
+            "JOINTS_0": 5,
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "WEIGHTS_0": 6
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "4e83dd12decf42538179ad8866ba0a50.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "W_IRifle_reference_skeleton"
+    },
+    {
+      "children": [
+        5,
+        7,
+        6
+      ],
+      "name": "Object_4"
+    },
+    {
+      "children": [
+        8
+      ],
+      "name": "_rootJoint"
+    },
+    {
+      "matrix": [
+        100.00000658019852,
+        -1.0441443620834434e-07,
+        -9.957830116036347e-08,
+        0.0,
+        -9.95782914220421e-08,
+        1.1776413230920825e-06,
+        -99.99999803547104,
+        0.0,
+        1.044144323111448e-07,
+        100.00000172466775,
+        1.1776413664336143e-06,
+        0.0,
+        -3.8060068163758842e-06,
+        -8.423201506957412e-06,
+        -0.0001580234995799401,
+        1.0
+      ],
+      "name": "Object_6"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_7",
+      "skin": 0
+    },
+    {
+      "children": [
+        9
+      ],
+      "name": "ValveBiped.Bip01_R_Hand_00",
+      "rotation": [
+        0.711319625377655,
+        0.6941114664077759,
+        -0.06290439516305923,
+        0.09097642451524734
+      ],
+      "scale": [
+        1.0,
+        0.9999998211860657,
+        1.0
+      ],
+      "translation": [
+        0.31250301003456116,
+        -16.71932029724121,
+        0.2826269865036011
+      ]
+    },
+    {
+      "children": [
+        10,
+        12
+      ],
+      "name": "ValveBiped.Weapon_bone_01",
+      "rotation": [
+        -2.3283069916502086e-10,
+        1.7832209096013685e-06,
+        7.025664672255516e-06,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        0.9999999403953552
+      ],
+      "translation": [
+        5.000020503997803,
+        -1.4999268054962158,
+        -5.000004768371582
+      ]
+    },
+    {
+      "children": [
+        11
+      ],
+      "name": "ValveBiped.w_shotgun_02",
+      "rotation": [
+        -0.4548397660255432,
+        -0.4258783459663391,
+        0.5563368797302246,
+        0.5497614741325378
+      ],
+      "scale": [
+        0.9999999403953552,
+        0.9999998211860657,
+        0.9999999403953552
+      ],
+      "translation": [
+        4.107149600982666,
+        1.396066427230835,
+        -0.3663673400878906
+      ]
+    },
+    {
+      "name": "ValveBiped.w_shotgun_end_04",
+      "rotation": [
+        -4.336808689942018e-19,
+        2.3891922680462994e-36,
+        -5.5091022889419694e-18,
+        1.0
+      ],
+      "translation": [
+        0.0,
+        0.06788204610347748,
+        0.0
+      ]
+    },
+    {
+      "children": [
+        13
+      ],
+      "name": "ValveBiped.muzzle_03",
+      "rotation": [
+        -0.7142685055732727,
+        0.08083639293909073,
+        0.07879974693059921,
+        0.6907073259353638
+      ],
+      "scale": [
+        1.0,
+        0.9999998211860657,
+        0.9999998807907104
+      ],
+      "translation": [
+        28.579805374145508,
+        0.6231056451797485,
+        -5.976167678833008
+      ]
+    },
+    {
+      "name": "ValveBiped.muzzle_end_05",
+      "rotation": [
+        9.31058615621927e-18,
+        -1.734723475976807e-18,
+        4.336808689942018e-19,
+        1.0
+      ],
+      "translation": [
+        -3.552713678800501e-15,
+        0.06788204610347748,
+        0.0
+      ]
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "inverseBindMatrices": 4,
+      "joints": [
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "skeleton": 5
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
