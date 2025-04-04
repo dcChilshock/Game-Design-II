@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2hv3elprw2ee"]
+[gd_scene load_steps=10 format=3 uid="uid://d2hv3elprw2ee"]
 
 [ext_resource type="Script" uid="uid://jpgjfvch7qq3" path="res://3d models/fps models/fps_player_template.gd" id="1_eoxvl"]
 [ext_resource type="PackedScene" uid="uid://bf3he5h45cd40" path="res://3d models/fps models/fps_pistol_animations.glb" id="2_eoxvl"]
@@ -11,10 +11,6 @@
 albedo_color = Color(1, 0.207843, 0.054902, 1)
 metallic = 1.0
 metallic_specular = 1.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7p1v"]
-albedo_color = Color(0, 0, 0.694118, 1)
-metallic = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_eoxvl"]
 font_size = 28
@@ -48,10 +44,10 @@ near = 0.25
 [node name="Gun" type="Node3D" parent="Head/Camera3D"]
 
 [node name="blaster" parent="Head/Camera3D/Gun" instance=ExtResource("2_eoxvl")]
-transform = Transform3D(-0.983175, 0.182592, -0.00522327, 0.181792, 0.980861, 0.0697562, 0.0178603, 0.0676334, -0.997547, -0.13928, -0.271624, -0.157478)
+transform = Transform3D(-0.99658, 0.0817194, -0.0123023, 0.0806879, 0.994359, 0.0688612, 0.0178603, 0.0676334, -0.997547, -0.131326, -0.241681, -0.157478)
 
 [node name="Sketchfab_model" parent="Head/Camera3D/Gun/blaster" index="0"]
-transform = Transform3D(1, 0, -2.23517e-08, -7.45058e-09, -7.45058e-09, 1, 0, -1, -2.23517e-08, -0.0734434, 0.0245349, -0.0319151)
+transform = Transform3D(0.984908, 0.0501002, -0.165667, 0.165876, -3.29167e-05, 0.986147, 0.0494007, -0.998745, -0.00834291, -0.0734435, 0.0245349, -0.0319151)
 
 [node name="Skeleton3D" parent="Head/Camera3D/Gun/blaster/Sketchfab_model/3ab9f780f2294ec8ba398c31f25c6b54_fbx/Object_2/RootNode/Armature/Object_6" index="0"]
 bones/3/rotation = Quaternion(-0.621273, -0.127523, 0.464384, 0.618147)
@@ -98,12 +94,6 @@ visible = false
 radius = 0.0568142
 height = 0.14681
 material = SubResource("StandardMaterial3D_aak7c")
-
-[node name="blasterl" type="CSGBox3D" parent="Head/Camera3D/Gun"]
-transform = Transform3D(0.595568, 0.173252, 0.324473, -0.107918, 0.672616, -0.161062, -0.351643, 0.0870093, 0.598979, 0.219, -0.213431, -0.421)
-visible = false
-size = Vector3(0.128687, 0.145801, 0.697644)
-material = SubResource("StandardMaterial3D_y7p1v")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 volume_db = -15.0

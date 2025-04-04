@@ -49,12 +49,11 @@ var NORMAL_HEAD = 0.8
 var CROUCH_HEAD = 0.4
 
 var unaim_pos = Vector3(0.08,-0.2,-0.2)
-var aim_pos = Vector3(-0.139,-0.272,-0.157)
+var aim_pos = Vector3(-0.131,-0.242,-0.157)
 var unaim_fov = 75.0
 var aim_fov = 45.0 
 var unaim_quat = euler_degrees_to_quat(Vector3(-10,-162,13.9))
-var aim_quat = euler_degrees_to_quat(Vector3(-3.9,-179,10.5
-))
+var aim_quat = euler_degrees_to_quat(Vector3(-3.9,-179.3,4.6))
 var target_pos = unaim_pos
 var target_quat = unaim_quat
 var target_fov = unaim_fov
@@ -182,9 +181,8 @@ func _physics_process(delta):
 		else:
 			animator.play("Armature|FPS_Pistol_Walk")
 	
-	if velocity:
-		ray.look_at(transform.origin + -velocity, Vector3.UP)
-		
+	#ray.look_at(transform.origin + -velocity, Vector3.UP)
+	
 	move_and_slide()
 	
 	if int(HEALTH) <= 0:
