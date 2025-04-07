@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://by4l5ve14quw2" path="res://fps_dart.gd" id="1_gylib"]
 [ext_resource type="AudioStream" uid="uid://chxes3ie24i14" path="res://Sound/fire.wav" id="2_ke3cv"]
-[ext_resource type="PackedScene" uid="uid://bgsole3dv5hlw" path="res://3d models/fps models/bullet_9_mm/scene.gltf" id="3_pdg0w"]
+[ext_resource type="PackedScene" uid="uid://bgsole3dv5hlw" path="res://3d models/fps models/guns/bullet_9_mm/scene.gltf" id="3_pdg0w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ke3cv"]
 albedo_color = Color(0.406835, 0.497778, 0.48426, 1)

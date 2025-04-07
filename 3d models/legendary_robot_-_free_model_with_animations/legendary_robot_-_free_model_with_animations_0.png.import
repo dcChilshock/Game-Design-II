@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmginqyah8ixo"
+uid="uid://bi2wfqfcatpli"
 path.s3tc="res://.godot/imported/legendary_robot_-_free_model_with_animations_0.png-282e82dedd2914593f579f8d8ca26362.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "8a11580a8b20bd70628619bc30e30065"
 }
 
 [deps]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce0lsvtjpv0ec"]
+
+[ext_resource type="PackedScene" uid="uid://blewoef6d52ft" path="res://3d models/fps models/castle_draftwork.glb" id="1_df3lo"]
+
+[node name="Castle_Keep" instance=ExtResource("1_df3lo")]

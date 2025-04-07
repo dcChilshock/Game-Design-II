@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://be7qve5prqnag"]
+
+[ext_resource type="PackedScene" uid="uid://b44yhh80sj41g" path="res://3d models/fps models/modular_vines.glb" id="1_tirc0"]
+
+[node name="Bramble" instance=ExtResource("1_tirc0")]

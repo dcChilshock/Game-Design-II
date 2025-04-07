@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpudmu10iq6tg"]
+
+[ext_resource type="Script" uid="uid://crdn840cuk1f2" path="res://fps_world_3.gd" id="1_46qek"]
+[ext_resource type="PackedScene" uid="uid://htej0by4ki7b" path="res://interstellar_haloring.tscn" id="1_djp0f"]
+[ext_resource type="PackedScene" uid="uid://d2hv3elprw2ee" path="res://3d models/fps models/fps_player_template.tscn" id="2_46qek"]
+[ext_resource type="PackedScene" uid="uid://c1i4665nmhwax" path="res://3d models/fps models/fps_enemy_template.tscn" id="3_t1ojm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g4xed"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_5q8jc"]
+sky_material = SubResource("ProceduralSkyMaterial_g4xed")
+
+[sub_resource type="Environment" id="Environment_w3pdo"]
+background_mode = 2
+sky = SubResource("Sky_5q8jc")
+tonemap_mode = 2
+
+[node name="fps_world_3" type="Node3D"]
+script = ExtResource("1_46qek")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_w3pdo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Interstellar_haloring" parent="." instance=ExtResource("1_djp0f")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 157.554, 633.347, -220.315)
+
+[node name="group108" parent="Interstellar_haloring/Sketchfab_model/b58fc570f128404db807b88ffa50d45f_fbx/Object_2/RootNode" index="110"]
+transform = Transform3D(0.923597, 0.383365, 0, -0.383365, 0.923597, 0, 0, 0, 1, -3836.33, 923.684, 0)
+
+[node name="AnimationPlayer" parent="Interstellar_haloring" index="1"]
+autoplay = "Take 001"
+speed_scale = 0.01
+
+[node name="fps_player" parent="." instance=ExtResource("2_46qek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.366, 646.925, -349.926)
+
+[node name="fps_enemy" parent="." instance=ExtResource("3_t1ojm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.319, 667.438, -218.641)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.18, 1200.53, -558.473)
+visible = false
+use_collision = true
+size = Vector3(1280.04, 1129.1, 5.14636)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.647, 1165.69, 119.193)
+visible = false
+use_collision = true
+size = Vector3(1280.04, 1117.36, 5.14636)
+
+[editable path="Interstellar_haloring"]

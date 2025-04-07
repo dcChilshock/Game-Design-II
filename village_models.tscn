@@ -80,7 +80,7 @@ transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 750.243,
 shape = SubResource("ConcavePolygonShape3D_ffbmn")
 
 [node name="Object005" parent="Sketchfab_model/7638e2b7c7e64ae986dec23b85c49935_fbx/RootNode" index="6"]
-transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 268.207, 4.77821e-13, 2151.91)
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, -20.8053, 4.77821e-13, 2151.91)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/7638e2b7c7e64ae986dec23b85c49935_fbx/RootNode/Object005/Object005_Mat_city_0" index="0"]
 
