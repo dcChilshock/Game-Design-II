@@ -30,9 +30,6 @@ shadow_enabled = true
 [node name="Interstellar_haloring" parent="." instance=ExtResource("1_djp0f")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 157.554, 633.347, -220.315)
 
-[node name="group108" parent="Interstellar_haloring/Sketchfab_model/b58fc570f128404db807b88ffa50d45f_fbx/Object_2/RootNode" index="110"]
-transform = Transform3D(0.923597, 0.383365, 0, -0.383365, 0.923597, 0, 0, 0, 1, -3836.33, 923.684, 0)
-
 [node name="AnimationPlayer" parent="Interstellar_haloring" index="1"]
 autoplay = "Take 001"
 speed_scale = 0.01

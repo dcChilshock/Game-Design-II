@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bnc06w22b8w2w"
+path="res://.godot/imported/Prop_Track_Sign_Upcoming_Esse.obj-79de2c67450be69af8bae57c61fde455.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Track_Sign_Upcoming_Esse.obj-79de2c67450be69af8bae57c61fde455.mesh"]
+
+source_file="res://racing/modular_racekart_track_collection_hilly_terrain/Prop_Track_Sign_Upcoming_Esse.obj"
+dest_files=["res://.godot/imported/Prop_Track_Sign_Upcoming_Esse.obj-79de2c67450be69af8bae57c61fde455.mesh", "res://.godot/imported/Prop_Track_Sign_Upcoming_Esse.obj-79de2c67450be69af8bae57c61fde455.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

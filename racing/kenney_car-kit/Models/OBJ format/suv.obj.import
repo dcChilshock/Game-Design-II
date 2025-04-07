@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://duk2ehv5lei77"
+path="res://.godot/imported/suv.obj-93d7a80ccc24d973c5e682d59e607976.mesh"
+
+[deps]
+
+files=["res://.godot/imported/suv.obj-93d7a80ccc24d973c5e682d59e607976.mesh"]
+
+source_file="res://racing/kenney_car-kit/Models/OBJ format/suv.obj"
+dest_files=["res://.godot/imported/suv.obj-93d7a80ccc24d973c5e682d59e607976.mesh", "res://.godot/imported/suv.obj-93d7a80ccc24d973c5e682d59e607976.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

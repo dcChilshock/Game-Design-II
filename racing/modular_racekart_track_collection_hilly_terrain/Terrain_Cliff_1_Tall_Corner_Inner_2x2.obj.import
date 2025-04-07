@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cmqgk3jyfdd4n"
+path="res://.godot/imported/Terrain_Cliff_1_Tall_Corner_Inner_2x2.obj-ad9d46f80fbc055a98b4b9754ca8216a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Terrain_Cliff_1_Tall_Corner_Inner_2x2.obj-ad9d46f80fbc055a98b4b9754ca8216a.mesh"]
+
+source_file="res://racing/modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_1_Tall_Corner_Inner_2x2.obj"
+dest_files=["res://.godot/imported/Terrain_Cliff_1_Tall_Corner_Inner_2x2.obj-ad9d46f80fbc055a98b4b9754ca8216a.mesh", "res://.godot/imported/Terrain_Cliff_1_Tall_Corner_Inner_2x2.obj-ad9d46f80fbc055a98b4b9754ca8216a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

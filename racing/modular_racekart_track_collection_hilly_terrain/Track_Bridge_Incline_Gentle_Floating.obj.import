@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bo2wl5usbyqly"
+path="res://.godot/imported/Track_Bridge_Incline_Gentle_Floating.obj-958e46e10e61a5c708d5808909a2179a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Track_Bridge_Incline_Gentle_Floating.obj-958e46e10e61a5c708d5808909a2179a.mesh"]
+
+source_file="res://racing/modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Floating.obj"
+dest_files=["res://.godot/imported/Track_Bridge_Incline_Gentle_Floating.obj-958e46e10e61a5c708d5808909a2179a.mesh", "res://.godot/imported/Track_Bridge_Incline_Gentle_Floating.obj-958e46e10e61a5c708d5808909a2179a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
