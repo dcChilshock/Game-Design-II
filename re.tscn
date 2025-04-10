@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3pamahc6uqxc"]
+
+[ext_resource type="PackedScene" uid="uid://b5cre4n4ab5j7" path="res://resident_evil_2_r.p.d_raccoon_police_station/scene.gltf" id="1_gxw7c"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_gxw7c")]

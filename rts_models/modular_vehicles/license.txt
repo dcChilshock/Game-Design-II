@@ -1,0 +1,11 @@
+Model Information:
+* title:	Modular Vehicles
+* source:	https://sketchfab.com/3d-models/modular-vehicles-3a516f8d3d9e4d819e7ef4562287f8a2
+* author:	sebferran (https://sketchfab.com/sebferran)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Modular Vehicles" (https://sketchfab.com/3d-models/modular-vehicles-3a516f8d3d9e4d819e7ef4562287f8a2) by sebferran (https://sketchfab.com/sebferran) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

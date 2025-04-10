@@ -1,0 +1,11 @@
+Model Information:
+* title:	Resident Evil 2 R.P.D Raccoon Police Station
+* source:	https://sketchfab.com/3d-models/resident-evil-2-rpd-raccoon-police-station-d5470d29fda841a296ec778fe2d965db
+* author:	Falah3D (https://sketchfab.com/3dFalah)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Resident Evil 2 R.P.D Raccoon Police Station" (https://sketchfab.com/3d-models/resident-evil-2-rpd-raccoon-police-station-d5470d29fda841a296ec778fe2d965db) by Falah3D (https://sketchfab.com/3dFalah) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
