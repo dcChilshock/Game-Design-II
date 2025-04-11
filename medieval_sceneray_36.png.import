@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cj3o0l6issmy7"
+path.s3tc="res://.godot/imported/medieval_sceneray_36.png-02db7e61c65cc0f688c9412ec5927330.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "6265c32e26bbc3a2f76cba4591dead6d"
+}
+
+[deps]
+
+source_file="res://medieval_sceneray_36.png"
+dest_files=["res://.godot/imported/medieval_sceneray_36.png-02db7e61c65cc0f688c9412ec5927330.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

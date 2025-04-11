@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://clb1x4eljr0b8"
+path.s3tc="res://.godot/imported/pride_and_joy_mk_0_5.png-61741bcb52d0fe56ab31688403309a92.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "378e70a9bffc83d8b43e181b1be1d2e3"
+}
+
+[deps]
+
+source_file="res://pride_and_joy_mk_0_5.png"
+dest_files=["res://.godot/imported/pride_and_joy_mk_0_5.png-61741bcb52d0fe56ab31688403309a92.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://pride_and_joy_mk_0_5.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
