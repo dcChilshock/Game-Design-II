@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dxw8h2f5wx2om"
+path="res://.godot/imported/prop_floor_brazier.obj-15a7ad94df4f5adf0b4af9dff6de3925.mesh"
+
+[deps]
+
+files=["res://.godot/imported/prop_floor_brazier.obj-15a7ad94df4f5adf0b4af9dff6de3925.mesh"]
+
+source_file="res://3d models/fantasy_buildings/dungeon/dungeon_collection_2/Dungeon Set 2/prop_floor_brazier.obj"
+dest_files=["res://.godot/imported/prop_floor_brazier.obj-15a7ad94df4f5adf0b4af9dff6de3925.mesh", "res://.godot/imported/prop_floor_brazier.obj-15a7ad94df4f5adf0b4af9dff6de3925.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

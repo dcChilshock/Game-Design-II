@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://qqwuldxqn3j8"]
 
-[ext_resource type="Texture2D" uid="uid://bprogq5e7j867" path="res://3d models/dungeon/dungeon_essential_kit/textures/Set2.001_baseColor.png" id="1_04oom"]
-[ext_resource type="Texture2D" uid="uid://cr4huwlftu5b0" path="res://3d models/dungeon/dungeon_essential_kit/textures/Set2.001_metallicRoughness.png" id="2_guo6s"]
+[ext_resource type="Texture2D" uid="uid://bprogq5e7j867" path="res://3d models/fantasy_buildings/dungeon/dungeon_essential_kit/textures/Set2.001_baseColor.png" id="1_04oom"]
+[ext_resource type="Texture2D" uid="uid://cr4huwlftu5b0" path="res://3d models/fantasy_buildings/dungeon/dungeon_essential_kit/textures/Set2.001_metallicRoughness.png" id="2_guo6s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6nys"]
 resource_name = "Set2.001"

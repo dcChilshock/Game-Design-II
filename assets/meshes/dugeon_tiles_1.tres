@@ -1,8 +1,8 @@
 [gd_resource type="MeshLibrary" load_steps=192 format=4 uid="uid://civ7t8i4mh6kk"]
 
-[ext_resource type="Texture2D" uid="uid://bqsc5lugqykxc" path="res://3d models/dungeon/dungeon_0.png" id="1_6td70"]
-[ext_resource type="Texture2D" uid="uid://dme5m5omo5f1h" path="res://3d models/dungeon/dungeon_1.png" id="2_13tf7"]
-[ext_resource type="Texture2D" uid="uid://bqob8kka6ylfq" path="res://3d models/dungeon/dungeon_2.png" id="3_i64g2"]
+[ext_resource type="Texture2D" uid="uid://bqsc5lugqykxc" path="res://3d models/fantasy_buildings/dungeon/dungeon_0.png" id="1_6td70"]
+[ext_resource type="Texture2D" uid="uid://dme5m5omo5f1h" path="res://3d models/fantasy_buildings/dungeon/dungeon_1.png" id="2_13tf7"]
+[ext_resource type="Texture2D" uid="uid://bqob8kka6ylfq" path="res://3d models/fantasy_buildings/dungeon/dungeon_2.png" id="3_i64g2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctemk"]
 resource_name = "Atlas1_3"

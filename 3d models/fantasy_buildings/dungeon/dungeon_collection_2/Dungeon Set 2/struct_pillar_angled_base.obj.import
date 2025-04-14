@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0lu8tfh8u7ku"
+path="res://.godot/imported/struct_pillar_angled_base.obj-c1b4ce644ad062c2e04cfc5f33f27e7b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/struct_pillar_angled_base.obj-c1b4ce644ad062c2e04cfc5f33f27e7b.mesh"]
+
+source_file="res://3d models/fantasy_buildings/dungeon/dungeon_collection_2/Dungeon Set 2/struct_pillar_angled_base.obj"
+dest_files=["res://.godot/imported/struct_pillar_angled_base.obj-c1b4ce644ad062c2e04cfc5f33f27e7b.mesh", "res://.godot/imported/struct_pillar_angled_base.obj-c1b4ce644ad062c2e04cfc5f33f27e7b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

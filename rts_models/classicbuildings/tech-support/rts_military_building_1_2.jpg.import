@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cm61gxv2oaq5s"
+path.s3tc="res://.godot/imported/rts_military_building_1_2.jpg-727cabfab4494169a7d63e2c0117bd85.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "a28d3323a6ec0959210374f3ca9731ad"
+}
+
+[deps]
+
+source_file="res://rts_models/classicbuildings/tech-support/rts_military_building_1_2.jpg"
+dest_files=["res://.godot/imported/rts_military_building_1_2.jpg-727cabfab4494169a7d63e2c0117bd85.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://rts_models/rts_military_building_1_2.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

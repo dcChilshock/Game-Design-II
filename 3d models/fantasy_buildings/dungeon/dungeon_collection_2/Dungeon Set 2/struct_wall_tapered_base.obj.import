@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cmti5lu6sdid1"
+path="res://.godot/imported/struct_wall_tapered_base.obj-d6ce925592926f1602fc43f137331987.mesh"
+
+[deps]
+
+files=["res://.godot/imported/struct_wall_tapered_base.obj-d6ce925592926f1602fc43f137331987.mesh"]
+
+source_file="res://3d models/fantasy_buildings/dungeon/dungeon_collection_2/Dungeon Set 2/struct_wall_tapered_base.obj"
+dest_files=["res://.godot/imported/struct_wall_tapered_base.obj-d6ce925592926f1602fc43f137331987.mesh", "res://.godot/imported/struct_wall_tapered_base.obj-d6ce925592926f1602fc43f137331987.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

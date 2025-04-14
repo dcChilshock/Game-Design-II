@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://c3wlqqbvfcd0b"]
 
 [ext_resource type="Script" uid="uid://du6g16omklibg" path="res://calibur_enemy.gd" id="1_20y01"]
-[ext_resource type="PackedScene" uid="uid://baskf6wqi6kph" path="res://VGC models/Calibur/calibur__vgdc.glb" id="2_sl7ya"]
+[ext_resource type="PackedScene" uid="uid://baskf6wqi6kph" path="res://3d models/VGC models/Calibur/calibur__vgdc.glb" id="2_sl7ya"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0y7bm"]
 size = Vector3(1.07059, 4.29099, 3.47771)
