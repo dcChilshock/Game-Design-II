@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mario Kart 8 Deluxe - Wii Moonview Highway
+* source:	https://sketchfab.com/3d-models/mario-kart-8-deluxe-wii-moonview-highway-ccdcee6b824c44ab8f90e7ed1090ad71
+* author:	H,yoshi (https://sketchfab.com/HY2245)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mario Kart 8 Deluxe - Wii Moonview Highway" (https://sketchfab.com/3d-models/mario-kart-8-deluxe-wii-moonview-highway-ccdcee6b824c44ab8f90e7ed1090ad71) by H,yoshi (https://sketchfab.com/HY2245) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
