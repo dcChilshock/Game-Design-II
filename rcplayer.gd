@@ -27,15 +27,15 @@ func _physics_process(delta:float) -> void:
 	$centermass.global_position = $centermass.global_position.lerp(global_position,delta*20)
 	$centermass.transform = $centermass.transform.interpolate_with(transform,delta*5.0)
 	$centermass/Camera3D.look_at(global_position.lerp(global_position + linear_velocity,delta *5.0))
-	while accel > 0:
+	if accel > 0:
 		audio.set_stream(movements)
-	if accel <= 0:
+	else:
 		audio.set_stream(engineloop)
 	if Input.is_action_just_pressed("honk"):
 		honker.set_stream(honk)
 		honker.play()
-
-	check_and_right()
+	else:
+		pass
 	
 func check_and_right():
 	if global_transform.basis.y.dot(Vector3.UP)<0:
