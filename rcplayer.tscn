@@ -1,6 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://0p2kw1kiljin"]
+[gd_scene load_steps=15 format=4 uid="uid://0p2kw1kiljin"]
 
 [ext_resource type="Script" uid="uid://cvyh4r3fo5n7w" path="res://rcplayer.gd" id="1_qigu2"]
+[ext_resource type="AudioStream" uid="uid://c1w5cmofcay2n" path="res://Sound/car_sound_effects_pack/Car_Engine_Loop_2.ogg" id="2_wa6nx"]
+[ext_resource type="AudioStream" uid="uid://caqe1y04218nq" path="res://Sound/car_sound_effects_pack/Car_Horn.ogg" id="3_foete"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4plj2"]
 resource_name = "paintRed"
@@ -287,3 +289,12 @@ size_flags_vertical = 8
 text = "0.mph"
 vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_wa6nx")
+volume_db = 6.0
+autoplay = true
+
+[node name="honker" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_foete")
+volume_db = 10.0
