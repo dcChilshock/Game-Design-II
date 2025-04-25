@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://ka6c6rsbmi4f"]
+
+[ext_resource type="PackedScene" uid="uid://dbiy52jmosrp4" path="res://mario_track.tscn" id="1_pa0ww"]
+[ext_resource type="PackedScene" uid="uid://0p2kw1kiljin" path="res://rcplayer.tscn" id="2_irk2u"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yhui5"]
+sky_top_color = Color(0.240646, 0.478547, 0.607469, 1)
+sky_horizon_color = Color(0.618668, 0.670393, 0.693624, 1)
+ground_horizon_color = Color(0.618668, 0.670393, 0.693624, 1)
+
+[sub_resource type="Sky" id="Sky_03nhd"]
+sky_material = SubResource("ProceduralSkyMaterial_yhui5")
+
+[sub_resource type="Environment" id="Environment_a8tdq"]
+background_mode = 2
+sky = SubResource("Sky_03nhd")
+tonemap_mode = 2
+
+[node name="rc_world_2" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a8tdq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.500003, -1.81001e-06, 0, -3.61999e-06, 1, -0.500003, 0.866023, 3.135e-06, 0, 0, 0)
+light_color = Color(0.960784, 0.682353, 0.239216, 1)
+shadow_enabled = true
+
+[node name="Mario_track" parent="." instance=ExtResource("1_pa0ww")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -1.74571, 0, 2.96935)
+
+[node name="race2" parent="." instance=ExtResource("2_irk2u")]
+transform = Transform3D(-0.9277, 0, 0.373328, 0, 1, 0, -0.373328, 0, -0.9277, 151.053, 22.609, -134.303)
