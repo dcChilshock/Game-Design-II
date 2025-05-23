@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://bd8bmdpwbwivr"]
+
+[ext_resource type="Script" uid="uid://cd6xw1h58ts46" path="res://player_3d.gd" id="1_gnsal"]
+[ext_resource type="PackedScene" uid="uid://bhqjlyugtoo4k" path="res://playerhud_3d.tscn" id="2_b1n4d"]
+[ext_resource type="PackedScene" uid="uid://bo1a7hoxixeco" path="res://3d models/characters/gobot.glb" id="3_4udof"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5xj4v"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hjopr"]
+height = 1.499
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqpyf"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ykay2"]
+radius = 0.581987
+
+[node name="Player3d" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_gnsal")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.169025, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_5xj4v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.773874, 0)
+shape = SubResource("CapsuleShape3D_hjopr")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+spring_length = 6.0
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0131095, 0.932557, -0.438002)
+
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+target_position = Vector3(0, 0, -10)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 0.999906, -0.0137179, 0, 0.0137179, 0.999906, 0, 0, 0)
+current = true
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.0131095, 0.877226, -9.8498)
+material_override = SubResource("StandardMaterial3D_jqpyf")
+flip_faces = true
+radial_segments = 4
+rings = 2
+
+[node name="Feet" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.214958, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Feet"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.337129, 0)
+shape = SubResource("CapsuleShape3D_ykay2")
+
+[node name="playerhud_3d" parent="." instance=ExtResource("2_b1n4d")]
+
+[node name="gobot" parent="." instance=ExtResource("3_4udof")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
